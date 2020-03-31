@@ -1,20 +1,28 @@
 import React from "react"
-import { Link } from "gatsby"
-
+import ProfileImage from "../components/profile-image"
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
+import BackgroundImageLayout from "../components/background-image-layout"
+import BackgroundColourLayout from "../components/background-colour-layout"
+
 
 const IndexPage = () => (
   <Layout>
+    <BackgroundImageLayout>
     <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
+      <div style={{paddingBottom: "3rem", paddingTop: "3rem"}}>
+        <ProfileImage />
+      </div>
+    </BackgroundImageLayout>
+    <BackgroundColourLayout altName="profile description" colourName="#355C7D" fontColour="white">
+      <div style={{padding: "3rem"}}>
+          <section>
+            <p>My name is Dublin Anondson and I'm a developer living in Arkansas.</p>
+          </section>
+      </div>
+    </BackgroundColourLayout>
+  
+    {/* <Link to="/page-2/">Go to page 2</Link> */}
   </Layout>
 )
 
