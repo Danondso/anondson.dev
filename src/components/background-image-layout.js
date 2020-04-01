@@ -19,11 +19,13 @@ const BackgroundImageLayout = ({ children }) => {
       Tag="section"
       alt="Photo by Rafaela Biazi on Unsplash"
       fluid={data.placeholderImage.childImageSharp.fluid}
+      style={{
+        boxShadow: `0 3px 2px rgba(0, 0, 0, 0.15)`,
+      }}
     >
       {children}
     </BackgroundImage>
   )
 }
-
 
 export default BackgroundImageLayout

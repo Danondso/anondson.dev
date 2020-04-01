@@ -7,21 +7,21 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import BackgroundColourLayout from "../components/background-colour-layout"
+//import { useStaticQuery, graphql } from "gatsby"
 
-import Header from "./header"
 import "./layout.css"
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
+  // const data = useStaticQuery(graphql`
+  //   query SiteTitleQuery {
+  //     site {
+  //       siteMetadata {
+  //         title
+  //       }
+  //     }
+  //   }
+  // `)
 
   return (
     <>
@@ -31,11 +31,28 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
+        <BackgroundColourLayout
+          colourName="#C06C84"
+          altName="Coloured background containing contact and footer info"
+          fontColour="white"
+        >
+          <footer>
+            <div
+              style={{
+                justifyContent: `center`,
+              }}
+            >
+              © {new Date().getFullYear()}, Made with love by
+              {` `}
+              <a
+                href="https://github.com/Danondso/"
+                style={{ color: `white`, textDecoration: `none` }}
+              >
+                Dublin Anondson
+              </a>
+            </div>
+          </footer>
+        </BackgroundColourLayout>
       </div>
     </>
   )
