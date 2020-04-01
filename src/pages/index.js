@@ -4,6 +4,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import BackgroundImageLayout from "../components/background-image-layout"
 import BackgroundColourLayout from "../components/background-colour-layout"
+import TextContainer from "../components/text-container"
 
 const IndexPage = () => (
   <Layout>
@@ -11,6 +12,9 @@ const IndexPage = () => (
       <SEO title="Home" />
       <div style={{ paddingBottom: "3rem", paddingTop: "3rem" }}>
         <ProfileImage />
+        <TextContainer>
+          <div style={{ color: `white`, margin: `0 auto` }}>Dublin Anondson</div>
+        </TextContainer>
       </div>
     </BackgroundImageLayout>
     <BackgroundColourLayout
@@ -23,52 +27,14 @@ const IndexPage = () => (
           display: `flex`,
           flexDirection: `row`,
           flexWrap: `wrap`,
-          justifyContent: `space-between`
+          justifyContent: `space-between`,
         }}
       >
-        <div
-          style={{
-            padding: "1rem",
-            maxWidth: `24rem`,
-            fontSize: `1.05rem`,
-          }}
-        >
-          Hello! My name is Dublin Anondson and I'm a developer located in the state of Arkansas.
-        </div>
-        <div
-          style={{
-            padding: "1rem",
-            maxWidth: `24rem`,
-            fontSize: `1.05rem`,
-          }}
-        >
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was popularised in the 1960s with
-          the release of Letraset sheets containing Lorem Ipsum passages, and
-          more recently with desktop publishing software like Aldus PageMaker
-          including versions of Lorem Ipsum.
-        </div>
-        <div
-          style={{
-            padding: "1rem",
-            maxWidth: `24rem`,
-            fontSize: `1.05rem`,
-          }}
-        >
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was popularised in the 1960s with
-          the release of Letraset sheets containing Lorem Ipsum passages, and
-          more recently with desktop publishing software like Aldus PageMaker
-          including versions of Lorem Ipsum.
-        </div>
+        <TextContainer></TextContainer>
+        <TextContainer></TextContainer>
+        <TextContainer>
+          When not at the computer you can find me playing music or video games.
+        </TextContainer>
       </section>
     </BackgroundColourLayout>
   </Layout>

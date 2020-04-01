@@ -27,7 +27,7 @@ const Layout = ({ children }) => {
     <>
       <div
         style={{
-          maxWidth: "100%",
+          maxWidth: "100%"
         }}
       >
         <main>{children}</main>
@@ -37,11 +37,6 @@ const Layout = ({ children }) => {
           fontColour="white"
         >
           <footer>
-            <div
-              style={{
-                justifyContent: `center`,
-              }}
-            >
               © {new Date().getFullYear()}, Made with love by
               {` `}
               <a
@@ -50,7 +45,6 @@ const Layout = ({ children }) => {
               >
                 Dublin Anondson
               </a>
-            </div>
           </footer>
         </BackgroundColourLayout>
       </div>
