@@ -12,9 +12,6 @@ const IndexPage = () => (
       <SEO title="Home" />
       <div style={{ paddingBottom: "3rem", paddingTop: "3rem" }}>
         <ProfileImage />
-        <TextContainer>
-          <div style={{ color: `white`, margin: `0 auto` }}>Dublin Anondson</div>
-        </TextContainer>
       </div>
     </BackgroundImageLayout>
     <BackgroundColourLayout
@@ -30,8 +27,18 @@ const IndexPage = () => (
           justifyContent: `space-between`,
         }}
       >
-        <TextContainer></TextContainer>
-        <TextContainer></TextContainer>
+        <TextContainer>
+          I'm a web developer located in{" "}
+          <a
+            href="https://northwestarkansas.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: `white`, textDecoration: `none` }}
+          >
+            Northwest Arkansas.
+          </a>
+        </TextContainer>
+        <TextContainer>My skill set includes Spring Boot, Node, Angular, and React.</TextContainer>
         <TextContainer>
           When not at the computer you can find me playing music or video games.
         </TextContainer>
