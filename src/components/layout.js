@@ -7,7 +7,6 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import BackgroundColourLayout from "../components/background-colour-layout"
 //import { useStaticQuery, graphql } from "gatsby"
 
 import "./layout.css"
@@ -24,31 +23,13 @@ const Layout = ({ children }) => {
   // `)
 
   return (
-    <>
-      <div
-        style={{
-          maxWidth: "100%"
-        }}
-      >
-        <main>{children}</main>
-        <BackgroundColourLayout
-          colourName="#C06C84"
-          altName="Coloured background containing contact and footer info"
-          fontColour="white"
-        >
-          <footer>
-              © {new Date().getFullYear()}, Made with love by
-              {` `}
-              <a
-                href="https://github.com/Danondso/"
-                style={{ color: `white`, textDecoration: `none` }}
-              >
-                Dublin Anondson
-              </a>
-          </footer>
-        </BackgroundColourLayout>
-      </div>
-    </>
+    <div
+      style={{
+        maxWidth: "100%"
+      }}
+    >
+      <main>{children}</main>
+    </div>
   )
 }
 

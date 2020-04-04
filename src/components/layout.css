@@ -2,6 +2,9 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
+
+// https://coolors.co/3e4e50-facfad-dd7230-f4c95d-8fa998
+// #3e4e50, #facfad, #dd7230, #f4c95d, #8fa998
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
