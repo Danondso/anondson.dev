@@ -22,7 +22,7 @@ const IndexPage = () => (
             marginTop: "1.5rem",
           }}
         >
-          <h1 style={{color: "#3E4E50"}}>Dublin Anondson</h1>
+          <h1 style={{ color: "#3E4E50" }}>Dublin Anondson</h1>
         </div>
       </div>
     </BackgroundColorLayout>
@@ -31,56 +31,73 @@ const IndexPage = () => (
       colorName="#FACFAD"
       fontcolor="#3E4E50"
     >
-        <h1 style={{color: "#3E4E50"}}>About.</h1>
-        <div
-          style={{
-            display: `flex`,
-            flexDirection: `row`,
-            flexWrap: `wrap`,
-            justifyContent: `space-between`,
-            color: "#3E4E50"
-          }}
-        >
-          <TextContainerLayout>
-            I'm a web developer located in{" "}
-            <a
-              href="https://northwestarkansas.org/"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ color: `white`, textDecoration: `none` }}
-            >
-              Northwest Arkansas
-            </a>
-            . I play several instruments and I like mountains.
-          </TextContainerLayout>
-          <TextContainerLayout>
-            My skill set includes Spring Boot, Node, Angular, and React, and few
-            other technologies. Some of my projects include a movie search site,
-            a todo list written in Angular. And a stripped down spotify clone.
-            Some of my professional work includes shipping a user management
-            system for a couple of mobile apps. Building IoT integrations for a
-            Fortune 500 transportation company.
-          </TextContainerLayout>
-          <TextContainerLayout>
-            When not at the computer you can find me playing music or video
-            games.
-          </TextContainerLayout>
-        </div>
+      <h1 style={{ color: "#3E4E50" }}>Hello.</h1>
+      <div
+        style={{
+          display: `flex`,
+          flexDirection: `row`,
+          flexWrap: `wrap`,
+          justifyContent: `space-between`,
+          color: "#3E4E50",
+        }}
+      >
+        <TextContainerLayout>
+          I'm Dublin Anondson. I'm a developer living in{" "}
+          <a
+            href="https://northwestarkansas.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Northwest Arkansas
+          </a>{" "}
+          with my lovely wife Rachel. It's gorgeous here but sometimes we wish we were closer to
+          some mountains ⛰️. I write code up the street at{" "}
+          <a
+            href="https://movista.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Movista.
+          </a>
+        </TextContainerLayout>
+        <TextContainerLayout>
+          I'm usually juggling a couple personal projects at a time, which you can
+          find on{" "}
+          <a
+            href="https://github.com/Danondso/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub.
+          </a>
+      {" "}Some of my past professional work includes shipping user management
+          systems for a couple of mobile apps. Building IoT integrations for a
+          Fortune 500 transportation company.
+        </TextContainerLayout>
+        <TextContainerLayout>
+          When not at the computer I'm usually making/listening/experiencing music or exercising.
+          I volunteer some time every month to help others in our industry through  <a
+            href="https://askadev.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            AskADev. 
+          </a> 
+          
+        </TextContainerLayout>
+      </div>
     </BackgroundColorLayout>
     <BackgroundColorLayout colorName="#8FA998" fontColor="#3E4E50">
       <h1>Let's get in touch.</h1>
       <TextContainerLayout>
-        You can message me{" "}
+        Drop me a line <a href="mailto:dublin@anondson@gmail.com">here.</a>{" "}
+        If social media is your thing my twitter handle is{" "}
         <a
-          href="mailto:dublin@anondson@gmail.com"
-          style={{ color: `white`, textDecoration: `none` }}
-        >
-          here.
-        </a> If social media is your thing my twitter handle is <a
           href="https://twitter.com/dublin_anondson"
-          style={{ color: `white`, textDecoration: `none` }}
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          @dublin_anondson
+          @dublin_anondson.
         </a>
       </TextContainerLayout>
     </BackgroundColorLayout>
@@ -90,13 +107,7 @@ const IndexPage = () => (
       fontcolor="#3E4E50"
     >
       <footer style={{ display: "flex", justifyContent: "center" }}>
-        © {new Date().getFullYear()}, Made with love by{" "}
-        <a
-          href="https://github.com/Danondso/"
-          style={{ color: `white`, textDecoration: `none` }}
-        >
-          Dublin Anondson
-        </a>
+        © {new Date().getFullYear()}, Made with love.
       </footer>
     </BackgroundColorLayout>
   </>
