@@ -1,19 +1,17 @@
 import React from "react"
 import ProfileImage from "../components/profile-image"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
-import BackgroundImageLayout from "../components/background-image-layout"
-import BackgroundColourLayout from "../components/background-colour-layout"
+import BackgroundColorLayout from "../components/layouts/background-color-layout"
 import TextContainer from "../components/text-container"
 
 const IndexPage = () => (
   <Layout>
-    <BackgroundColourLayout
-      colourName="#F4C95D"
-      altName="Coloured background containing contact and footer info"
-      fontColour="#3e4e50"
+    <BackgroundColorLayout
+      colorName="#F4C95D"
+      altName="colored background containing contact and footer info"
+      fontcolor="#3E4E50"
     >
-      <SEO title="Home" />
+      
       <div style={{ paddingBottom: "3rem", paddingTop: "3rem" }}>
         <ProfileImage />
         <div
@@ -22,11 +20,11 @@ const IndexPage = () => (
           <h1>Dublin Anondson</h1>
         </div>
       </div>
-    </BackgroundColourLayout>
-    <BackgroundColourLayout
+    </BackgroundColorLayout>
+    <BackgroundColorLayout
       altName="profile description"
-      colourName="#FACFAD"
-      fontColour="#3E4E50"
+      colorName="#FACFAD"
+      fontcolor="#3E4E50"
     >
       <section
         style={{
@@ -59,11 +57,11 @@ const IndexPage = () => (
           When not at the computer you can find me playing music or video games.
         </TextContainer>
       </section>
-    </BackgroundColourLayout>
-    <BackgroundColourLayout
-      colourName="#DD7230"
-      altName="Coloured background containing contact and footer info"
-      fontColour="#3E4E50"
+    </BackgroundColorLayout>
+    <BackgroundColorLayout
+      colorName="#DD7230"
+      altName="colored background containing contact and footer info"
+      fontcolor="#3E4E50"
     >
       <footer style={{display: "flex", justifyContent: "center"}}>
         © {new Date().getFullYear()}, Made with love by {" "}
@@ -74,7 +72,7 @@ const IndexPage = () => (
            Dublin Anondson
         </a>
       </footer>
-    </BackgroundColourLayout>
+    </BackgroundColorLayout>
   </Layout>
 )
 
