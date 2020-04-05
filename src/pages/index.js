@@ -1,7 +1,7 @@
 import React from "react"
 import ProfileImage from "../components/profile-image"
 import BackgroundColorLayout from "../components/layouts/background-color-layout"
-import TextContainer from "../components/text-container"
+import TextContainerLayout from "../components/layouts/text-container"
 import SEO from "../components/seo"
 import "../components/styles.css"
 
@@ -41,7 +41,7 @@ const IndexPage = () => (
           justifyContent: `space-between`,
         }}
       >
-        <TextContainer>
+        <TextContainerLayout>
           I'm a web developer located in{" "}
           <a
             href="https://northwestarkansas.org/"
@@ -52,18 +52,18 @@ const IndexPage = () => (
             Northwest Arkansas
           </a>
           . I play several instruments and I like mountains.
-        </TextContainer>
-        <TextContainer>
+        </TextContainerLayout>
+        <TextContainerLayout>
           My skill set includes Spring Boot, Node, Angular, and React, and few
           other technologies. Some of my projects include a movie search site, a
           todo list written in Angular. And a stripped down spotify clone. Some
           of my professional work includes shipping a user management system for
           a couple of mobile apps. Building IoT integrations for a Fortune 500
           transportation company.
-        </TextContainer>
-        <TextContainer>
+        </TextContainerLayout>
+        <TextContainerLayout>
           When not at the computer you can find me playing music or video games.
-        </TextContainer>
+        </TextContainerLayout>
       </section>
     </BackgroundColorLayout>
     <BackgroundColorLayout

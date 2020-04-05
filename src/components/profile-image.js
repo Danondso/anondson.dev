@@ -33,7 +33,7 @@ const ProfileImage = () => {
         maxHeight: "250px",
         maxWidth: "250px",
         borderRadius: "100%",
-        border: `1rem solid white`,
+        border: `.75rem solid white`,
       }}
       fluid={data.placeholderImage.childImageSharp.fluid}
     />
