@@ -3,7 +3,7 @@ import ProfileImage from "../components/profile-image"
 import BackgroundColorLayout from "../components/layouts/background-color-layout"
 import TextContainerLayout from "../components/layouts/text-container-layout"
 import ExternalLink from "../components/external-link"
-import Footer from "../components/external-link"
+import Footer from "../components/footer"
 import SEO from "../components/seo"
 import "../components/styles.css"
 
