@@ -2,6 +2,8 @@ import React from "react"
 import ProfileImage from "../components/profile-image"
 import BackgroundColorLayout from "../components/layouts/background-color-layout"
 import TextContainerLayout from "../components/layouts/text-container-layout"
+import ExternalLink from "../components/external-link"
+import Footer from "../components/external-link"
 import SEO from "../components/seo"
 import "../components/styles.css"
 
@@ -43,107 +45,67 @@ const IndexPage = () => (
       >
         <TextContainerLayout>
           I'm Dublin Anondson. I'm a developer living in{" "}
-          <a
-            href="https://northwestarkansas.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <ExternalLink url="https://northwestarkansas.org/">
             Northwest Arkansas
-          </a>{" "}
+          </ExternalLink>{" "}
           with my lovely wife Rachel. It's gorgeous here but sometimes we wish
           we were closer to some mountains ⛰️. I write code up the street at{" "}
-          <a
-            href="https://movista.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Movista.
-          </a>
+          <ExternalLink url="https://movista.com/">Movista.</ExternalLink>
         </TextContainerLayout>
         <TextContainerLayout>
           I'm usually juggling a couple personal projects at a time, which you
           can find on
-          <a
-            href="https://github.com/Danondso/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <ExternalLink url="https://github.com/Danondso/">
             {" "}
             GitHub.{"  "}
-          </a>
+          </ExternalLink>
           Including a
-          <a
-            href="https://pedantic-fermat-392953.netlify.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <ExternalLink url="https://pedantic-fermat-392953.netlify.com/">
             {" "}
             movie search app{"  "}
-          </a>
+          </ExternalLink>
           and a minimalist
-          <a
-            href="https://github.com/Danondso/basic-music-player"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <ExternalLink url="https://github.com/Danondso/basic-music-player">
             {" "}
             spotify clone.{"  "}
-          </a>
+          </ExternalLink>
           Some of my past professional work includes shipping a user management
           system for
-          <a
-            href="https://apps.apple.com/us/app/fsbp-track-it/id1458886205"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <ExternalLink url="https://apps.apple.com/us/app/fsbp-track-it/id1458886205">
             {" "}
             FSBP TrackIt.
-          </a>
+          </ExternalLink>
         </TextContainerLayout>
         <TextContainerLayout>
           When not at the computer I'm usually making/listening/experiencing
           music or exercising. I volunteer some time every month to help others
-          through{" "}
-          <a
-            href="https://askadev.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            AskADev. {"  "}
-          </a>{" "}
-          I also publish some guides (and other stuff) over on
-          <a
-            href="https://dev.to/danondso"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          through
+          <ExternalLink url="https://askadev.org/">
             {" "}
-            dev.
-          </a>
+            AskADev. {"  "}
+          </ExternalLink>
+          I also publish some guides (and other stuff) over on
+          <ExternalLink url="https://dev.to/danondso"> dev.</ExternalLink>
         </TextContainerLayout>
       </div>
     </BackgroundColorLayout>
     <BackgroundColorLayout colorName="#8FA998" fontColor="#3E4E50">
       <h1>Let's get in touch.</h1>
       <TextContainerLayout>
-        Drop me a line <a href="mailto:dublin@anondson@gmail.com">here.</a> If
-        social media is your thing my twitter handle is{" "}
-        <a
-          href="https://twitter.com/dublin_anondson"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          @dublin_anondson.
-        </a>{" "}
-        And if you want to get really professional about here's my
-        <a
-          href="https://www.linkedin.com/in/dublin-anondson-4b562793/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        Drop me a line{" "}
+        <ExternalLink url="mailto:dublin@anondson@gmail.com">
+          here.
+        </ExternalLink>
+        If social media is your thing my twitter handle is
+        <ExternalLink url="https://twitter.com/dublin_anondson">
           {" "}
-          LinkedIn {"  "}
-        </a>
+          @dublin_anondson.
+        </ExternalLink>
+        And if you want to get really professional about it here's my
+        <ExternalLink url="https://www.linkedin.com/in/dublin-anondson-4b562793/">
+          {" "}
+          LinkedIn{" "}
+        </ExternalLink>
         as well.
       </TextContainerLayout>
     </BackgroundColorLayout>
@@ -152,11 +114,7 @@ const IndexPage = () => (
       altName="Colored background containing contact and footer info"
       fontcolor="#3E4E50"
     >
-      <footer
-        style={{ display: "flex", justifyContent: "center", color: "#3E4E50" }}
-      >
-        © {new Date().getFullYear()}, Made with love.
-      </footer>
+      <Footer />
     </BackgroundColorLayout>
   </>
 )
