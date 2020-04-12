@@ -1,7 +1,7 @@
 import React from "react"
-import BackgroundColorLayout from "../background-color-layout"
-import TextContainerLayout from "../text-container-layout"
-import ExternalLink from "../../external-link"
+import BackgroundColorLayout from "../layouts/background-color-layout"
+import TextContainerLayout from "../layouts/text-container-layout"
+import ExternalLink from "../external-link"
 
 const ContactSection = () => (
   <BackgroundColorLayout colorName="#8FA998" fontColor="#3E4E50">

@@ -1,5 +1,5 @@
 import React from "react"
-import BackgroundColorLayout from "../background-color-layout"
+import BackgroundColorLayout from "../layouts/background-color-layout"
 
 export default () => {
   return (

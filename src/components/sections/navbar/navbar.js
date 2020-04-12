@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import BackgroundColorLayout from "../../background-color-layout"
+import BackgroundColorLayout from "../../layouts/background-color-layout"
 import "./navbar.css"
 const isActive = ({ isCurrent }) => {
   console.log(isCurrent)

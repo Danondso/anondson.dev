@@ -1,12 +1,12 @@
 import React from "react"
-import Footer from "../components/layouts/subcomponents/footer-section"
 import SEO from "../components/seo"
-
+import ContactSection from "../components/sections/contact-section"
+import AboutSection from "../components/sections/about-section"
+import TitleSection from "../components/sections/title-section"
+import Navbar from "../components/sections/navbar/navbar"
+import Footer from "../components/layouts/subcomponents/footer-section"
 import "../components/styles.css"
-import ContactSection from "../components/layouts/subcomponents/contact-section"
-import AboutSection from "../components/layouts/subcomponents/about-section"
-import TitleSection from "../components/layouts/subcomponents/title-section"
-import Navbar from "../components/layouts/subcomponents/navbar/navbar"
+
 
 const IndexPage = () => (
   <>

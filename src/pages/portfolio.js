@@ -3,8 +3,9 @@ import { graphql } from "gatsby"
 import PostLink from "../components/post-link"
 import Footer from "../components/layouts/subcomponents/footer-section"
 import SEO from "../components/seo"
+import Navbar from "../components/sections/navbar/navbar"
+
 import "../components/styles.css"
-import Navbar from "../components/layouts/subcomponents/navbar/navbar"
 
 const PortfolioPage = ({
   data: {
