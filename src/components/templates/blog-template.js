@@ -1,25 +1,44 @@
 import React from "react"
 import { graphql } from "gatsby"
 import BackgroundColorLayout from "../layouts/background-color-layout"
-
+import Footer from "../sections/footer-section"
+import Navbar from "../sections/navbar/navbar"
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
 }) {
   const { markdownRemark } = data // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark
   return (
-    <BackgroundColorLayout>
-      <div className="blog-post-container">
-        <div className="blog-post">
-          <h1>{frontmatter.title}</h1>
-          <h2>{frontmatter.date}</h2>
-          <div
-            className="blog-post-content"
-            dangerouslySetInnerHTML={{ __html: html }}
-          />
+    <>
+      <Navbar />
+
+      <BackgroundColorLayout
+        colorName="#DD7230"
+        altName="Colored background containing contact and footer info"
+        fontcolor="#3E4E50"
+      >
+        <div
+          className="blog-post-container"
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            marginTop: "1.5rem",
+            color: `#3E4E50`
+          }}
+        >
+          <div className="blog-post">
+            <h1>{frontmatter.title}</h1>
+            <h2>{frontmatter.date}</h2>
+            <h3>{frontmatter.description}</h3>
+            <div
+              className="blog-post-content"
+              dangerouslySetInnerHTML={{ __html: html }}
+            />
+          </div>
         </div>
-      </div>
-    </BackgroundColorLayout>
+      </BackgroundColorLayout>
+      <Footer />
+    </>
   )
 }
 
@@ -31,6 +50,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         path
         title
+        description
       }
     }
   }

@@ -14,7 +14,7 @@ const PortfolioPage = ({
 }) => {
   const Posts = edges
     .filter(edge => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
-    .map(edge => <PostLink key={edge.node.id} post={edge.node} />)
+    .map(edge => <PostLink backgroundColor="#8FA998" key={edge.node.id} post={edge.node} />)
   return (
     <>
       <SEO title="Portfolio" />
@@ -38,6 +38,7 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             path
             title
+            description
           }
         }
       }
