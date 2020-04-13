@@ -6,6 +6,7 @@ import SEO from "../components/seo"
 import Navbar from "../components/sections/navbar/navbar"
 
 import "../components/styles.css"
+import BackgroundColorLayout from "../components/layouts/background-color-layout"
 
 const PortfolioPage = ({
   data: {
@@ -21,6 +22,21 @@ const PortfolioPage = ({
     <>
       <SEO title="Portfolio" />
       <Navbar />
+      <BackgroundColorLayout
+        colorName="#F4C95D"
+        altName="Colored background containing contact and footer info"
+        fontcolor="#3E4E50"
+      >
+        <div
+          style={{
+            display: `flex`,
+            justifyContent: `center`,
+            color: `#3E4E50`,
+          }}
+        >
+          <h1>Portfolio</h1>
+        </div>
+      </BackgroundColorLayout>
       {Posts}
       <Footer />
     </>
