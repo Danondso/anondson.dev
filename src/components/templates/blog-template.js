@@ -13,7 +13,7 @@ export default function Template({
       <Navbar />
 
       <BackgroundColorLayout
-        colorName="#DD7230"
+        colorName="#FACFAD"
         altName="Colored background containing contact and footer info"
         fontcolor="#3E4E50"
       >

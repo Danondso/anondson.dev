@@ -1,5 +1,5 @@
 ---
-path: "/portfolio/my-first-post"
+path: "/portfolio/doer"
 date: "2019-05-04"
 title: "doer"
 description: "a MEAN stack todo list"
