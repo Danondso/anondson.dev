@@ -1,0 +1,9 @@
+.inactive {
+  color: #ffffff;
+  padding: 0.25rem;
+}
+
+.active {
+  color: #3e4e50;
+  padding: 0.25rem;
+}

@@ -1,22 +1,21 @@
 import React from "react"
-import BackgroundColorLayout from "../../layouts/background-color-layout"
-import TextContainerLayout from "../../layouts/text-container-layout"
-import ExternalLink from "../../external-link"
+import BackgroundColorLayout from "../layouts/background-color-layout"
+import TextContainerLayout from "../layouts/text-container-layout"
+import ExternalLink from "../external-link"
 
 const AboutSection = () => (
   <BackgroundColorLayout
     altName="profile description"
     colorName="#FACFAD"
-    fontcolor="#3E4E50"
   >
-    <h1 style={{ color: "#3E4E50" }}>Hello.</h1>
+    <h1 style={{ color: `#3E4E50` }}>Hello.</h1>
     <div
       style={{
         display: `flex`,
         flexDirection: `row`,
         flexWrap: `wrap`,
         justifyContent: `space-between`,
-        color: "#3E4E50",
+        color: `#3E4E50`,
       }}
     >
       <TextContainerLayout>

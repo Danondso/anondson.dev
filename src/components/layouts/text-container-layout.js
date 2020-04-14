@@ -6,7 +6,7 @@ const TextContainerLayout = ({children}) => {
   return (
     <section
       style={{
-        padding: "1rem",
+        padding: `1rem`,
         maxWidth: `24rem`,
         fontSize: `1.05rem`,
       }}
