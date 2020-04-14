@@ -6,7 +6,6 @@ const TitleSection = () => (
   <BackgroundColorLayout
     colorName="#F4C95D"
     altName="Colored background containing contact and footer info"
-    fontcolor="#3E4E50"
   >
     <div style={{ paddingBottom: "3rem", paddingTop: "3rem" }}>
       <ProfileImage />

@@ -4,7 +4,7 @@ import BackgroundColorLayout from "./layouts/background-color-layout"
 import "../components/styles.css"
 
 const PostLink = ({ post, backgroundColor }) => (
-  <BackgroundColorLayout colorName={backgroundColor} fontColor="#3E4E50">
+  <BackgroundColorLayout colorName={backgroundColor}>
     <div
       style={{ display: "flex", justifyContent: "center", color: "#3E4E50" }}
     >

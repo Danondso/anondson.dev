@@ -15,7 +15,6 @@ export default function Template({
       <BackgroundColorLayout
         colorName="#FACFAD"
         altName="Colored background containing contact and footer info"
-        fontcolor="#3E4E50"
       >
         <div
           className="blog-post-container"

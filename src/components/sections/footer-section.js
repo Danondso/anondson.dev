@@ -6,7 +6,6 @@ export default () => {
     <BackgroundColorLayout
       colorName="#DD7230"
       altName="Colored background containing contact and footer info"
-      fontcolor="#3E4E50"
     >
       <footer
         style={{ display: "flex", justifyContent: "center", color: "#3E4E50" }}

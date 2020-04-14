@@ -12,7 +12,6 @@ export default () => {
     <BackgroundColorLayout
       colorName="#F4C95D"
       altName="Colored background containing contact and footer info"
-      fontcolor="#3E4E50"
     >
       <nav style={{ float: "right", marginTop: "-1rem" }}>
         <Link to="/" getProps={isActive}>

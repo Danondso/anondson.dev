@@ -7,7 +7,6 @@ const AboutSection = () => (
   <BackgroundColorLayout
     altName="profile description"
     colorName="#FACFAD"
-    fontcolor="#3E4E50"
   >
     <h1 style={{ color: "#3E4E50" }}>Hello.</h1>
     <div

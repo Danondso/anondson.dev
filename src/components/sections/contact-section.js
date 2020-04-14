@@ -4,7 +4,7 @@ import TextContainerLayout from "../layouts/text-container-layout"
 import ExternalLink from "../external-link"
 
 const ContactSection = () => (
-  <BackgroundColorLayout colorName="#8FA998" fontColor="#3E4E50">
+  <BackgroundColorLayout colorName="#8FA998">
     <h1>Let's get in touch.</h1>
     <TextContainerLayout>
       Drop me a line{" "}
