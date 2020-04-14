@@ -21,12 +21,12 @@ export default function Template({
           style={{
             display: "flex",
             justifyContent: "center",
-            marginTop: "1.5rem",
+            padding: "7.5rem",
             color: `#3E4E50`,
             margin: `0 auto`
           }}
         >
-          <div className="blog-post" style={{maxWidth: "40rem"}}>
+          <div style={{maxWidth: "40rem"}}>
             <h1>{frontmatter.title}</h1>
             <h2>{frontmatter.date}</h2>
             <h3>{frontmatter.description}</h3>

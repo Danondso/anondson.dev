@@ -8,7 +8,7 @@ const PostLink = ({ post, backgroundColor }) => (
     <div
       style={{ display: "flex", justifyContent: "center", color: "#3E4E50" }}
     >
-      <Link to={post.frontmatter.path} style={{color: "#FFF"}}>
+      <Link to={post.frontmatter.path} style={{ color: "#FFF" }}>
         <h1>{post.frontmatter.title}</h1>
       </Link>
     </div>
