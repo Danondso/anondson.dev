@@ -8,7 +8,7 @@ export default () => {
       altName="Colored background containing contact and footer info"
     >
       <footer
-        style={{ display: "flex", justifyContent: "center", color: "#3E4E50" }}
+        style={{ display: `flex`, justifyContent: `center`, color: `#3E4E50` }}
       >
         © {new Date().getFullYear()}, Made with love.
       </footer>

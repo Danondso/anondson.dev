@@ -19,14 +19,14 @@ export default function Template({
         <div
           className="blog-post-container"
           style={{
-            display: "flex",
-            justifyContent: "center",
-            padding: "7.5rem",
+            display: `flex`,
+            justifyContent: `center`,
+            padding: `7.5rem`,
             color: `#3E4E50`,
-            margin: `0 auto`
+            margin: `0 auto`,
           }}
         >
-          <div style={{maxWidth: "40rem"}}>
+          <div style={{ maxWidth: `40rem` }}>
             <h1>{frontmatter.title}</h1>
             <h2>{frontmatter.date}</h2>
             <h3>{frontmatter.description}</h3>

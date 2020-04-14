@@ -8,14 +8,14 @@ const AboutSection = () => (
     altName="profile description"
     colorName="#FACFAD"
   >
-    <h1 style={{ color: "#3E4E50" }}>Hello.</h1>
+    <h1 style={{ color: `#3E4E50` }}>Hello.</h1>
     <div
       style={{
         display: `flex`,
         flexDirection: `row`,
         flexWrap: `wrap`,
         justifyContent: `space-between`,
-        color: "#3E4E50",
+        color: `#3E4E50`,
       }}
     >
       <TextContainerLayout>

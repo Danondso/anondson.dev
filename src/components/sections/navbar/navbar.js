@@ -13,7 +13,7 @@ export default () => {
       colorName="#F4C95D"
       altName="Colored background containing contact and footer info"
     >
-      <nav style={{ float: "right", marginTop: "-1rem" }}>
+      <nav style={{ float: `right`, marginTop: `-1rem` }}>
         <Link to="/" getProps={isActive}>
           Home
         </Link>
