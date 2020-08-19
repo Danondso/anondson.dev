@@ -1,7 +1,7 @@
 import React from "react"
 import BackgroundColorLayout from "../layouts/background-color-layout"
 import TextContainerLayout from "../layouts/text-container-layout"
-import ExternalLink from "../external-link"
+import ExternalLink from "../external-link/external-link"
 
 const AboutSection = () => (
   <BackgroundColorLayout

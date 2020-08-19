@@ -1,4 +1,5 @@
 import React from "react"
+import './external-link.css'
 
 export default ({ children, url }) => {
   return (
@@ -6,7 +7,7 @@ export default ({ children, url }) => {
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      style={{ color: `white`, textDecoration: `none` }}
+      className="link"
     >
       {children}
     </a>

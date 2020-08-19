@@ -1,8 +1,8 @@
 import React from "react"
 import { graphql } from "gatsby"
-import PostLink from "../components/post-link"
+import PostLink from "../components/post-link/post-link"
 import Footer from "../components/sections/footer-section"
-import SEO from "../components/seo"
+import SEO from "../components/seo/seo"
 import Navbar from "../components/sections/navbar/navbar"
 
 import "../components/styles.css"

@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
-import BackgroundColorLayout from "./layouts/background-color-layout"
-import "../components/styles.css"
+import BackgroundColorLayout from "../layouts/background-color-layout"
+import "../../components/styles.css"
 
 const PostLink = ({ post, backgroundColor }) => (
   <BackgroundColorLayout colorName={backgroundColor}>

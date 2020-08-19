@@ -1,6 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
+import './profile-image.css';
 
 /*
  * This component is built using gatsby-image to automatically serve optimized
@@ -28,13 +29,7 @@ const ProfileImage = () => {
 
   return (
     <Img
-      style={{
-        margin: `0 auto`,
-        maxHeight: `250px`,
-        maxWidth: `250px`,
-        borderRadius: `100%`,
-        border: `.75rem solid white`,
-      }}
+      className="profile-image"
       fluid={data.placeholderImage.childImageSharp.fluid}
     />
   )
