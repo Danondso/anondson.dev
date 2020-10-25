@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`External Link Snapshot test renders correctly 1`] = `
+<section
+  alt="A default setup for a colored background section."
+  style={
+    Object {
+      "backgroundColor": "#8FA998",
+      "boxShadow": "0 3px 2px rgba(0, 0, 0, 0.15)",
+      "padding": "4rem",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "color": "#3E4E50",
+        "display": "flex",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <a
+      href="/some/path"
+      style={
+        Object {
+          "color": "#FFF",
+        }
+      }
+    >
+      <h1>
+        Fake Title
+      </h1>
+    </a>
+  </div>
+</section>
+`;

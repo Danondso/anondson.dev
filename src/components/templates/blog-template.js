@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import BackgroundColorLayout from "../layouts/background-color-layout"
+import BackgroundColorLayout from "../../layouts/background-color-layout/background-color-layout"
 import Footer from "../sections/footer-section"
 import Navbar from "../sections/navbar/navbar"
 export default function Template({
@@ -26,7 +26,7 @@ export default function Template({
             margin: `0 auto`,
           }}
         >
-          <div style={{ maxWidth: `40rem` }}>
+          <div style={{ minWidth: `20rem` }}>
             <h1>{frontmatter.title}</h1>
             <h2>{frontmatter.date}</h2>
             <h3>{frontmatter.description}</h3>

@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BackgroundColorLayout Snapshot test renders correctly 1`] = `
+<section
+  alt="Test Background Section"
+  style={
+    Object {
+      "backgroundColor": "#000000",
+      "boxShadow": "0 3px 2px rgba(0, 0, 0, 0.15)",
+      "padding": "4rem",
+    }
+  }
+>
+   
+  <h1>
+    Hello
+  </h1>
+   
+</section>
+`;
