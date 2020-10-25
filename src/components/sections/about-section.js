@@ -4,10 +4,7 @@ import TextContainerLayout from "../layouts/text-container-layout"
 import ExternalLink from "../external-link/external-link"
 
 const AboutSection = () => (
-  <BackgroundColorLayout
-    altName="profile description"
-    colorName="#FACFAD"
-  >
+  <BackgroundColorLayout altName="profile description" colorName="#FACFAD">
     <h1 style={{ color: `#3E4E50` }}>Hello.</h1>
     <div
       style={{
