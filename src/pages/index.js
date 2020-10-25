@@ -7,7 +7,6 @@ import Navbar from "../components/sections/navbar/navbar"
 import Footer from "../components/sections/footer-section"
 import "../components/styles.css"
 
-
 const IndexPage = () => (
   <>
     <SEO title="Home" />

@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { graphql, useStaticQuery } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
-//Since we can't pass in image names to the graphql queries, we're 
+//Since we can't pass in image names to the graphql queries, we're
 //stuck with hard-coding the value into the query
 const BackgroundImageLayout = ({ children }) => {
   const data = useStaticQuery(graphql`

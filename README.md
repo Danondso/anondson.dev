@@ -1,5 +1,7 @@
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-My personal website written using gatsby. 
+
+My personal website written using gatsby.
+
 <h1 align="center">
   Gatsby's default starter
 </h1>
