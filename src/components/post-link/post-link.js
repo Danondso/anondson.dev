@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import BackgroundColorLayout from "../layouts/background-color-layout"
+import BackgroundColorLayout from "../../layouts/background-color-layout/background-color-layout"
 import "../../components/styles.css"
 
 const PostLink = ({ post, backgroundColor }) => (

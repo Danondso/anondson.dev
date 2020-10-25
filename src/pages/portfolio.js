@@ -6,7 +6,7 @@ import SEO from "../components/seo/seo"
 import Navbar from "../components/sections/navbar/navbar"
 
 import "../components/styles.css"
-import BackgroundColorLayout from "../components/layouts/background-color-layout"
+import BackgroundColorLayout from "../layouts/background-color-layout/background-color-layout"
 
 const PortfolioPage = ({
   data: {
