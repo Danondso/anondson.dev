@@ -27,6 +27,7 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `gatsby-starter-default`,
+        icon: 'src/favicon.png',
         short_name: `starter`,
         start_url: `/`,
         display: `minimal-ui`, // This path is relative to the root of the site.
