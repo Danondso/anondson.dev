@@ -1,12 +1,12 @@
 import React from "react"
 import "../components/styles.css"
-import SEO from "../components/seo/seo"
+import Seo from "../components/seo/seo"
 import { Link } from "gatsby"
 
 const NotFoundPage = () => (
   <div style={{ height: `100%` }}>
     <>
-      <SEO title="404: Not found" />
+      <Seo title="404: Not found" />
       <div
         style={{
           display: `flex`,

@@ -7,7 +7,7 @@ const isActive = ({ isCurrent }) => {
   return isCurrent ? { className: "active" } : { className: "inactive" }
 }
 
-export default () => {
+const NavBar = () => {
   return (
     <BackgroundColorLayout
       colorName="#F4C95D"
@@ -17,10 +17,9 @@ export default () => {
         <Link to="/" getProps={isActive}>
           Home
         </Link>
-        <Link to="/portfolio" getProps={isActive}>
-          Portfolio
-        </Link>
       </nav>
     </BackgroundColorLayout>
   )
 }
+
+export default NavBar;

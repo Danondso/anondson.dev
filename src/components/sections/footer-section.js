@@ -1,7 +1,7 @@
 import React from "react"
 import BackgroundColorLayout from "../../layouts/background-color-layout/background-color-layout"
 
-export default () => {
+const FooterSection = () => {
   return (
     <BackgroundColorLayout
       colorName="#DD7230"
@@ -15,3 +15,5 @@ export default () => {
     </BackgroundColorLayout>
   )
 }
+
+export default FooterSection;

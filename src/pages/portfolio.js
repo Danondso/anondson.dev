@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import PostLink from "../components/post-link/post-link"
 import Footer from "../components/sections/footer-section"
-import SEO from "../components/seo/seo"
+import Seo from "../components/seo/seo"
 import Navbar from "../components/sections/navbar/navbar"
 
 import "../components/styles.css"
@@ -20,7 +20,7 @@ const PortfolioPage = ({
     ))
   return (
     <>
-      <SEO title="Portfolio" />
+      <Seo title="Portfolio" />
       <Navbar />
       <BackgroundColorLayout
         colorName="#F4C95D"
