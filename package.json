@@ -28,6 +28,8 @@
   "devDependencies": {
     "babel-jest": "^27.0.6",
     "babel-preset-gatsby": "^1.8.0",
+    "eslint": "^7.30.0",
+    "eslint-config-airbnb": "^18.2.1",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.0.6",
     "prettier": "^2.3.2",
@@ -42,15 +44,17 @@
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
+    "lint": "eslint .",
+    "lint-fix": "eslint . --fix",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "jest"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/Danondso/anondson.dev"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/Danondso/anondson.dev/issues"
   }
 }
