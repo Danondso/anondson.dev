@@ -1,12 +1,12 @@
-import React from "react"
-import { graphql } from "gatsby"
-import PostLink from "../components/post-link/post-link"
-import Footer from "../components/sections/footer-section"
-import Seo from "../components/seo/seo"
-import Navbar from "../components/sections/navbar/navbar"
+import React from 'react';
+import { graphql } from 'gatsby';
+import PostLink from '../components/post-link/post-link';
+import Footer from '../components/sections/footer-section';
+import Seo from '../components/seo/seo';
+import Navbar from '../components/sections/navbar/navbar';
 
-import "../components/styles.css"
-import BackgroundColorLayout from "../layouts/background-color-layout/background-color-layout"
+import '../components/styles.css';
+import BackgroundColorLayout from '../layouts/background-color-layout/background-color-layout';
 
 const PortfolioPage = ({
   data: {
@@ -14,10 +14,10 @@ const PortfolioPage = ({
   },
 }) => {
   const Posts = edges
-    .filter(edge => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
-    .map(edge => (
+    .filter((edge) => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
+    .map((edge) => (
       <PostLink backgroundColor="#8FA998" key={edge.node.id} post={edge.node} />
-    ))
+    ));
   return (
     <>
       <Seo title="Portfolio" />
@@ -28,9 +28,9 @@ const PortfolioPage = ({
       >
         <div
           style={{
-            display: `flex`,
-            justifyContent: `center`,
-            color: `#3E4E50`,
+            display: 'flex',
+            justifyContent: 'center',
+            color: '#3E4E50',
           }}
         >
           <h1>Portfolio</h1>
@@ -39,10 +39,10 @@ const PortfolioPage = ({
       {Posts}
       <Footer />
     </>
-  )
-}
+  );
+};
 
-export default PortfolioPage
+export default PortfolioPage;
 
 export const pageQuery = graphql`
   query {
@@ -61,4 +61,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

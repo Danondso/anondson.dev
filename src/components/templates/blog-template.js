@@ -1,13 +1,14 @@
-import React from "react"
-import { graphql } from "gatsby"
-import BackgroundColorLayout from "../../layouts/background-color-layout/background-color-layout"
-import Footer from "../sections/footer-section"
-import Navbar from "../sections/navbar/navbar"
+import React from 'react';
+import { graphql } from 'gatsby';
+import BackgroundColorLayout from '../../layouts/background-color-layout/background-color-layout';
+import Footer from '../sections/footer-section';
+import Navbar from '../sections/navbar/navbar';
+
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
 }) {
-  const { markdownRemark } = data // data.markdownRemark holds your post data
-  const { frontmatter, html } = markdownRemark
+  const { markdownRemark } = data; // data.markdownRemark holds your post data
+  const { frontmatter, html } = markdownRemark;
   return (
     <>
       <Navbar />
@@ -19,14 +20,14 @@ export default function Template({
         <div
           className="blog-post-container"
           style={{
-            display: `flex`,
-            justifyContent: `center`,
-            padding: `7.5rem`,
-            color: `#3E4E50`,
-            margin: `0 auto`,
+            display: 'flex',
+            justifyContent: 'center',
+            padding: '7.5rem',
+            color: '#3E4E50',
+            margin: '0 auto',
           }}
         >
-          <div style={{ minWidth: `20rem` }}>
+          <div style={{ minWidth: '20rem' }}>
             <h1>{frontmatter.title}</h1>
             <h2>{frontmatter.date}</h2>
             <h3>{frontmatter.description}</h3>
@@ -39,11 +40,11 @@ export default function Template({
       </BackgroundColorLayout>
       <Footer />
     </>
-  )
+  );
 }
 
 export const pageQuery = graphql`
-  query($path: String!) {
+  query ($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
       frontmatter {
@@ -54,4 +55,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

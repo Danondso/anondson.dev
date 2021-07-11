@@ -1,7 +1,7 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
-import "./profile-image.css"
+import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
+import Img from 'gatsby-image';
+import './profile-image.css';
 
 /*
  * This component is built using gatsby-image to automatically serve optimized
@@ -25,14 +25,14 @@ const ProfileImage = () => {
         }
       }
     }
-  `)
+  `);
 
   return (
     <Img
       className="profile-image"
       fluid={data.placeholderImage.childImageSharp.fluid}
     />
-  )
-}
+  );
+};
 
-export default ProfileImage
+export default ProfileImage;

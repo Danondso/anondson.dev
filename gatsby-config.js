@@ -1,46 +1,46 @@
 module.exports = {
   siteMetadata: {
-    title: `Personal site for Dublin Anondson; anondson.dev`,
-    description: `The third or 4th iteration of my personal site, this time it's written in Gatsby!`,
-    author: `@gatsbyjs`,
+    title: 'Personal site for Dublin Anondson; anondson.dev',
+    description: 'The third or 4th iteration of my personal site, this time it\'s written in Gatsby!',
+    author: '@gatsbyjs',
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
+    'gatsby-plugin-react-helmet',
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: `images`,
+        name: 'images',
         path: `${__dirname}/src/images`,
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: `markdown-pages`,
+        name: 'markdown-pages',
         path: `${__dirname}/src/markdown-pages`,
       },
     },
-    `gatsby-transformer-remark`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    'gatsby-transformer-remark',
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: 'gatsby-plugin-manifest',
       options: {
-        name: `gatsby-starter-default`,
+        name: 'gatsby-starter-default',
         icon: 'src/favicon.png',
-        short_name: `starter`,
-        start_url: `/`,
-        display: `minimal-ui`, // This path is relative to the root of the site.
+        short_name: 'starter',
+        start_url: '/',
+        display: 'minimal-ui', // This path is relative to the root of the site.
       },
     },
     {
-      resolve: `gatsby-plugin-typography`,
+      resolve: 'gatsby-plugin-typography',
       options: {
-        pathToConfigModule: `src/utils/typography`,
+        pathToConfigModule: 'src/utils/typography',
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-}
+};
