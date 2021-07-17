@@ -1,5 +1,5 @@
 import React from 'react';
-import '../components/styles.css';
+import '../styles.css';
 import { Link } from 'gatsby';
 import Seo from '../components/seo/seo';
 
