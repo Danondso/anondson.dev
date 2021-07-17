@@ -9,9 +9,9 @@ const ContactSection = () => (
     <TextContainerLayout>
       Drop me a line
       {' '}
-      <ExternalLink url="mailto:dublin@anondson@gmail.com">here.</ExternalLink>
+      <ExternalLink url="mailto:dublin.anondson@gmail.com">here.</ExternalLink>
       If social media is your thing my twitter handle is
-      <ExternalLink url="https://twitter.com/dublin_anondson">
+      <ExternalLink url="https://twitter.com/DublinAnondson">
         {' '}
         @dublin_anondson.
       </ExternalLink>
