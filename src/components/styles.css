@@ -1,3 +1,13 @@
+:root {
+  --background-orange: #dd7230;
+  --background-yellow: #f4c95d;
+  --background-green: #8fa998;
+  --background-peach: #facfad;
+  --text-color: #3e4e50;
+  --white: #ffffff;
+  --black: #000000;
+}
+
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;

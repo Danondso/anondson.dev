@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`External Link Snapshot test renders correctly 1`] = `
+exports[`External Link Snapshot Test Suite renders correctly with required props 1`] = `
 <a
   className="link"
   href="http://localhost:8080"
   rel="noopener noreferrer"
   target="_blank"
 >
-   LocalHost 
+  LocalHost
 </a>
 `;
