@@ -16,21 +16,21 @@ const PortfolioPage = ({
   const Posts = edges
     .filter((edge) => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
     .map((edge) => (
-      <PostLink backgroundColor="#8FA998" key={edge.node.id} post={edge.node} />
+      <PostLink backgroundColor="var(--background-green)" key={edge.node.id} post={edge.node} />
     ));
   return (
     <>
       <Seo title="Portfolio" />
       <Navbar />
       <BackgroundColorLayout
-        colorName="#F4C95D"
+        colorName="var(--background-yellow)"
         altName="Colored background containing contact and footer info"
       >
         <div
           style={{
             display: 'flex',
             justifyContent: 'center',
-            color: '#3E4E50',
+            color: 'var(--text-color)',
           }}
         >
           <h1>Portfolio</h1>

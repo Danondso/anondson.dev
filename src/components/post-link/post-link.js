@@ -6,9 +6,9 @@ import '../styles.css';
 const PostLink = ({ post, backgroundColor }) => (
   <BackgroundColorLayout colorName={backgroundColor}>
     <div
-      style={{ display: 'flex', justifyContent: 'center', color: '#3E4E50' }}
+      style={{ display: 'flex', justifyContent: 'center', color: 'var(--text-color)' }}
     >
-      <Link to={post.frontmatter.path} style={{ color: '#FFF' }}>
+      <Link to={post.frontmatter.path} style={{ color: 'var(--white)' }}>
         <h1>{post.frontmatter.title}</h1>
       </Link>
     </div>

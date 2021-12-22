@@ -14,7 +14,7 @@ export default function Template({
       <Navbar />
 
       <BackgroundColorLayout
-        colorName="#FACFAD"
+        colorName="var(--background-peach)"
         altName="Colored background containing contact and footer info"
       >
         <div
@@ -23,7 +23,7 @@ export default function Template({
             display: 'flex',
             justifyContent: 'center',
             padding: '7.5rem',
-            color: '#3E4E50',
+            color: 'var(--text-color)',
             margin: '0 auto',
           }}
         >

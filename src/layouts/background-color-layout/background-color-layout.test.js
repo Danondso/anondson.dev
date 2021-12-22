@@ -7,13 +7,13 @@ describe('BackgroundColorLayout Snapshot test', () => {
     const tree = renderer
       .create(
         <BackgroundColorLayout
-          colorName="#000000"
+          colorName="var(--black)"
           altName="Test Background Section"
         >
           {' '}
           <h1>Hello</h1>
           {' '}
-        </BackgroundColorLayout>,
+        </BackgroundColorLayout>
       )
       .toJSON();
     expect(tree).toMatchSnapshot();

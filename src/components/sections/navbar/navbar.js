@@ -10,7 +10,7 @@ const isActive = ({ isCurrent }) => {
 
 const NavBar = () => (
   <BackgroundColorLayout
-    colorName="#F4C95D"
+    colorName="var(--background-yellow)"
     altName="Colored background containing contact and footer info"
   >
     <nav style={{ float: 'right', marginTop: '-1rem' }}>

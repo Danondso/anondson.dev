@@ -1,9 +1,9 @@
 .inactive {
-  color: #ffffff;
+  color: var(--white);
   padding: 0.25rem;
 }
 
 .active {
-  color: #3e4e50;
+  color: var(--text-color);
   padding: 0.25rem;
 }

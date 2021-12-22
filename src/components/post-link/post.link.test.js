@@ -12,7 +12,7 @@ describe('External Link Snapshot test', () => {
     };
 
     const tree = renderer
-      .create(<PostLink backgroundColor="#8FA998" key={1235} post={postData} />)
+      .create(<PostLink backgroundColor="var(--background-green)" key={1235} post={postData} />)
       .toJSON();
     expect(tree).toMatchSnapshot();
   });

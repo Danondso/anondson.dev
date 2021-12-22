@@ -15,15 +15,13 @@ const BackgroundColorLayout = ({ children, colorName, altName }) => (
 );
 
 BackgroundColorLayout.defaultProps = {
-  children: <p>Color Layout Works!</p>,
-  colorName: '#FFFFFF',
-  altName: 'A default setup for a colored background section.',
+  colorName: 'var(--white)',
 };
 
 BackgroundColorLayout.propTypes = {
   children: PropTypes.node.isRequired,
   colorName: PropTypes.string,
-  altName: PropTypes.string,
+  altName: PropTypes.string.isRequired,
 };
 
 export default BackgroundColorLayout;
