@@ -1,10 +1,16 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './external-link.css';
 
-const externalLink = ({ children, url }) => (
+const ExternalLink = ({ text = '', url = '' }) => (
   <a href={url} target="_blank" rel="noopener noreferrer" className="link">
-    {children}
+    {text}
   </a>
 );
 
-export default externalLink;
+ExternalLink.propTypes = {
+  text: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
+};
+
+export default ExternalLink;
