@@ -10,5 +10,18 @@
             "exports": "always-multiline",
             "functions": "never"
         }]
-    }
+    },
+    "overrides": [
+        {
+          "files": [
+            "**/*.test.js",
+            "**/*.test.jsx",
+            "**/*.spec.js",
+            "**/*.spec.jsx"
+          ],
+          "env": {
+            "jest": true
+          }
+        }
+      ]
 }
