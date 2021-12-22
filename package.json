@@ -5,6 +5,7 @@
   "version": "1.0.1",
   "author": "Dublin Anondson <stratophone@gmail.com>",
   "dependencies": {
+    "babel-jest": "^27.0.6",
     "gatsby": "^3.8.1",
     "gatsby-background-image": "^1.1.2",
     "gatsby-image": "^3.8.0",
@@ -26,7 +27,6 @@
     "typography-theme-stow-lake": "^0.16.19"
   },
   "devDependencies": {
-    "babel-jest": "^27.0.6",
     "babel-preset-gatsby": "^1.8.0",
     "eslint": "^7.30.0",
     "eslint-config-airbnb": "^18.2.1",
