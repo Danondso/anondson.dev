@@ -16,15 +16,15 @@ const AboutSection = () => (
       }}
     >
       <TextContainerLayout>
-        I'm Dublin Anondson. I'm a developer living in
+        I&apos;m Dublin Anondson. I&apos;m a developer living in
         <ExternalLink url="https://northwestarkansas.org/" text=" Northwest Arkansas " />
-        with my lovely wife Rachel. It's gorgeous here but sometimes we wish we
+        with my lovely wife Rachel. It&apos;s gorgeous here but sometimes we wish we
         were closer to some mountains ⛰️. I write code up the street at
         {' '}
         <ExternalLink url="https://movista.com/" text=" Movista. " />
       </TextContainerLayout>
       <TextContainerLayout>
-        I'm usually juggling a couple personal projects at a time, which you can
+        I&apos;m usually juggling a couple personal projects at a time, which you can
         find on
         <ExternalLink url="https://github.com/Danondso/" text=" GitHub. " />
         Including a
@@ -36,7 +36,7 @@ const AboutSection = () => (
         <ExternalLink url="https://apps.apple.com/us/app/fsbp-track-it/id1458886205" text=" FSBP TrackIt. " />
       </TextContainerLayout>
       <TextContainerLayout>
-        When not at the computer I'm usually making/listening/experiencing music
+        When not at the computer I&apos;m usually making/listening/experiencing music
         or exercising. I volunteer some time every month to help others through
         <ExternalLink url="https://askadev.org/" text=" AskADev. " />
         I also publish some guides (and other stuff) over on

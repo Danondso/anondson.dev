@@ -10,7 +10,7 @@ describe('TextContainerLayout Snapshot test', () => {
           {' '}
           <h1>Whoah ho ho some text</h1>
           {' '}
-        </TextContainerLayout>,
+        </TextContainerLayout>
       )
       .toJSON();
     expect(tree).toMatchSnapshot();

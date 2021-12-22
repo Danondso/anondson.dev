@@ -23,16 +23,17 @@ module.exports = {
     'gatsby-transformer-remark',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
-    {
-      resolve: 'gatsby-plugin-manifest',
-      options: {
-        name: 'gatsby-starter-default',
-        icon: 'src/favicon.png',
-        short_name: 'starter',
-        start_url: '/',
-        display: 'minimal-ui', // This path is relative to the root of the site.
-      },
-    },
+    // removing plugin-manifest because it straight up doesn't play nice with the favicon path
+    // {
+    //   resolve: 'gatsby-plugin-manifest',
+    //   options: {
+    //     name: 'gatsby-starter-default',
+    //     icon: 'src/images/favicon.png',
+    //     short_name: 'starter',
+    //     start_url: '/',
+    //     display: 'minimal-ui', // This path is relative to the root of the site.
+    //   },
+    // },
     {
       resolve: 'gatsby-plugin-typography',
       options: {
