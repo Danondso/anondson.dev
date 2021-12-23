@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`navbar Test Suite renders correctly with required props 1`] = `
+<section
+  alt="Colored background containing contact and footer info"
+  style={
+    Object {
+      "backgroundColor": "var(--background-yellow)",
+      "boxShadow": "0 3px 2px rgba(0, 0, 0, 0.15)",
+      "padding": "4rem",
+    }
+  }
+>
+  <nav
+    style={
+      Object {
+        "float": "right",
+        "marginTop": "-1rem",
+      }
+    }
+  >
+    <a
+      href="/"
+    >
+      Home
+    </a>
+  </nav>
+</section>
+`;

@@ -1,7 +1,7 @@
 import React from 'react';
-import BackgroundColorLayout from '../../layouts/background-color-layout/background-color-layout';
-import TextContainerLayout from '../../layouts/text-container-layout/text-container-layout';
-import ExternalLink from '../external-link/external-link';
+import BackgroundColorLayout from '../../../layouts/background-color-layout/background-color-layout';
+import TextContainerLayout from '../../../layouts/text-container-layout/text-container-layout';
+import ExternalLink from '../../external-link/external-link';
 
 const AboutSection = () => (
   <BackgroundColorLayout altName="profile description" colorName="var(--background-peach)">
@@ -20,7 +20,6 @@ const AboutSection = () => (
         <ExternalLink url="https://northwestarkansas.org/" text=" Northwest Arkansas " />
         with my lovely wife Rachel. It&apos;s gorgeous here but sometimes we wish we
         were closer to some mountains ⛰️. I write code up the street at
-        {' '}
         <ExternalLink url="https://movista.com/" text=" Movista. " />
       </TextContainerLayout>
       <TextContainerLayout>
