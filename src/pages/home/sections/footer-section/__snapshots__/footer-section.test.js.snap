@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer Section Test Suite renders correctly 1`] = `
+<section
+  alt="Colored background containing contact and footer info"
+  style={
+    Object {
+      "backgroundColor": "var(--background-orange)",
+      "boxShadow": "0 3px 2px rgba(0, 0, 0, 0.15)",
+      "padding": "4rem",
+    }
+  }
+>
+  <footer
+    style={
+      Object {
+        "color": "var(--text-color)",
+        "display": "flex",
+        "justifyContent": "center",
+      }
+    }
+  >
+    ©
+     
+    2021
+    , Made with love.
+  </footer>
+</section>
+`;

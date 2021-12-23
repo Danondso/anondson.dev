@@ -1,21 +1,10 @@
 import React from 'react';
-import Seo from '../components/seo/seo';
-import ContactSection from '../components/sections/contact-section';
-import AboutSection from '../components/sections/about-section';
-import TitleSection from '../components/sections/title-section';
-import Navbar from '../components/sections/navbar/navbar';
-import Footer from '../components/sections/footer-section';
+import Home from './home/home';
+
 import '../components/styles.css';
 
 const IndexPage = () => (
-  <>
-    <Seo title="Home" />
-    <Navbar />
-    <TitleSection />
-    <AboutSection />
-    <ContactSection />
-    <Footer />
-  </>
+  <Home />
 );
 
 export default IndexPage;
