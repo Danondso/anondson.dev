@@ -1,7 +1,7 @@
 import React from 'react';
-import BackgroundColorLayout from '../../../layouts/background-color-layout/background-color-layout';
-import TextContainerLayout from '../../../layouts/text-container-layout/text-container-layout';
-import ExternalLink from '../../external-link/external-link';
+import BackgroundColorLayout from '../../../../layouts/background-color-layout/background-color-layout';
+import TextContainerLayout from '../../../../layouts/text-container-layout/text-container-layout';
+import ExternalLink from '../../../../components/external-link/external-link';
 
 const ContactSection = () => (
   <BackgroundColorLayout colorName="var(--background-green)" altName="Contact Section of anondson.dev">

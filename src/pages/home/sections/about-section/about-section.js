@@ -1,7 +1,7 @@
 import React from 'react';
-import BackgroundColorLayout from '../../../layouts/background-color-layout/background-color-layout';
-import TextContainerLayout from '../../../layouts/text-container-layout/text-container-layout';
-import ExternalLink from '../../external-link/external-link';
+import BackgroundColorLayout from '../../../../layouts/background-color-layout/background-color-layout';
+import TextContainerLayout from '../../../../layouts/text-container-layout/text-container-layout';
+import ExternalLink from '../../../../components/external-link/external-link';
 
 const AboutSection = () => (
   <BackgroundColorLayout altName="profile description" colorName="var(--background-peach)">

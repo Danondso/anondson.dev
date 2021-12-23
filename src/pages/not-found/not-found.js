@@ -1,9 +1,9 @@
 import React from 'react';
-import '../components/styles.css';
+import '../../components/styles.css';
 import { Link } from 'gatsby';
-import Seo from '../components/seo/seo';
+import Seo from '../../components/seo/seo';
 
-const NotFoundPage = () => (
+const NotFound = () => (
   <div style={{ height: '100%' }}>
     <>
       <Seo title="404: Not found" />
@@ -22,4 +22,4 @@ const NotFoundPage = () => (
   </div>
 );
 
-export default NotFoundPage;
+export default NotFound;

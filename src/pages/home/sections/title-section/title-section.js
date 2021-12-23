@@ -1,6 +1,6 @@
 import React from 'react';
-import BackgroundColorLayout from '../../../layouts/background-color-layout/background-color-layout';
-import ProfileImage from '../../profile-image/profile-image';
+import BackgroundColorLayout from '../../../../layouts/background-color-layout/background-color-layout';
+import ProfileImage from '../../../../components/profile-image/profile-image';
 
 const TitleSection = () => (
   <BackgroundColorLayout
