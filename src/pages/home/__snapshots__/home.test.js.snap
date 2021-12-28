@@ -210,24 +210,6 @@ Array [
         >
            GitHub. 
         </a>
-        Including a
-        <a
-          className="link"
-          href="https://pedantic-fermat-392953.netlify.com/"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-           movie search app 
-        </a>
-        and a minimalist
-        <a
-          className="link"
-          href="https://github.com/Danondso/basic-music-player"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-           spotify clone. 
-        </a>
         Some of my past professional work includes shipping a user management system for
         <a
           className="link"
@@ -235,7 +217,16 @@ Array [
           rel="noopener noreferrer"
           target="_blank"
         >
-           FSBP TrackIt. 
+           FSBP TrackIt 
+        </a>
+        and writing some of the core middleware backbone and a couple screens for Movista's  mobille communication app,
+        <a
+          className="link"
+          href="https://apps.apple.com/us/app/yapp-by-movista/id1529672092"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+           YAPP.
         </a>
       </section>
       <section
@@ -308,6 +299,25 @@ Array [
         target="_blank"
       >
          LinkedIn.
+      </a>
+    </section>
+    <section
+      style={
+        Object {
+          "fontSize": "1.05rem",
+          "maxWidth": "24rem",
+          "padding": "1rem",
+        }
+      }
+    >
+      Check out my spotify wrapped for
+      <a
+        className="link"
+        href="https://open.spotify.com/playlist/37i9dQZF1EUMDoJuT8yJsl?si=ca43a9b4ec9e448c"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+         2021.
       </a>
     </section>
   </section>,

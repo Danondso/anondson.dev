@@ -43,5 +43,24 @@ exports[`Contact Section Test Suite renders correctly 1`] = `
        LinkedIn.
     </a>
   </section>
+  <section
+    style={
+      Object {
+        "fontSize": "1.05rem",
+        "maxWidth": "24rem",
+        "padding": "1rem",
+      }
+    }
+  >
+    Check out my spotify wrapped for
+    <a
+      className="link"
+      href="https://open.spotify.com/playlist/37i9dQZF1EUMDoJuT8yJsl?si=ca43a9b4ec9e448c"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+       2021.
+    </a>
+  </section>
 </section>
 `;

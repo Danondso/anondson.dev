@@ -77,24 +77,6 @@ exports[`About Section Test Suite renders correctly 1`] = `
       >
          GitHub. 
       </a>
-      Including a
-      <a
-        className="link"
-        href="https://pedantic-fermat-392953.netlify.com/"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-         movie search app 
-      </a>
-      and a minimalist
-      <a
-        className="link"
-        href="https://github.com/Danondso/basic-music-player"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-         spotify clone. 
-      </a>
       Some of my past professional work includes shipping a user management system for
       <a
         className="link"
@@ -102,7 +84,16 @@ exports[`About Section Test Suite renders correctly 1`] = `
         rel="noopener noreferrer"
         target="_blank"
       >
-         FSBP TrackIt. 
+         FSBP TrackIt 
+      </a>
+      and writing some of the core middleware backbone and a couple screens for Movista's  mobille communication app,
+      <a
+        className="link"
+        href="https://apps.apple.com/us/app/yapp-by-movista/id1529672092"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+         YAPP.
       </a>
     </section>
     <section

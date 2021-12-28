@@ -26,13 +26,11 @@ const AboutSection = () => (
         I&apos;m usually juggling a couple personal projects at a time, which you can
         find on
         <ExternalLink url="https://github.com/Danondso/" text=" GitHub. " />
-        Including a
-        <ExternalLink url="https://pedantic-fermat-392953.netlify.com/" text=" movie search app " />
-        and a minimalist
-        <ExternalLink url="https://github.com/Danondso/basic-music-player" text=" spotify clone. " />
         Some of my past professional work includes shipping a user management
         system for
-        <ExternalLink url="https://apps.apple.com/us/app/fsbp-track-it/id1458886205" text=" FSBP TrackIt. " />
+        <ExternalLink url="https://apps.apple.com/us/app/fsbp-track-it/id1458886205" text=" FSBP TrackIt " />
+        and writing some of the core middleware backbone and a couple screens for Movista&apos;s  mobille communication app,
+        <ExternalLink url="https://apps.apple.com/us/app/yapp-by-movista/id1529672092" text=" YAPP." />
       </TextContainerLayout>
       <TextContainerLayout>
         When not at the computer I&apos;m usually making/listening/experiencing music
