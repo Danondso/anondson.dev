@@ -13,6 +13,10 @@ const ContactSection = () => (
       If you want to get really professional about it here&apos;s my
       <ExternalLink url="https://www.linkedin.com/in/dublin-anondson-4b562793/" text=" LinkedIn." />
     </TextContainerLayout>
+    <TextContainerLayout>
+      Check out my spotify wrapped for
+      <ExternalLink url="https://open.spotify.com/playlist/37i9dQZF1EUMDoJuT8yJsl?si=ca43a9b4ec9e448c" text=" 2021." />
+    </TextContainerLayout>
   </BackgroundColorLayout>
 );
 
