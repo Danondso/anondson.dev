@@ -19,8 +19,7 @@ const AboutSection = () => (
         I&apos;m Dublin Anondson. I&apos;m a developer living in
         <ExternalLink url="https://northwestarkansas.org/" text=" Northwest Arkansas " />
         with my lovely wife Rachel. It&apos;s gorgeous here but sometimes we wish we
-        were closer to some mountains ⛰️. I write code up the street at
-        <ExternalLink url="https://movista.com/" text=" Movista. " />
+        were closer to some mountains ⛰️. I&apos;ve taken a sabbatical and am now looking help organizations succeed once again in their technical endeavors.
       </TextContainerLayout>
       <TextContainerLayout>
         I&apos;m usually juggling a couple personal projects at a time, which you can
@@ -29,8 +28,9 @@ const AboutSection = () => (
         Some of my past professional work includes shipping a user management
         system for
         <ExternalLink url="https://apps.apple.com/us/app/fsbp-track-it/id1458886205" text=" FSBP TrackIt " />
-        and writing some of the core middleware backbone and a couple screens for Movista&apos;s  mobille communication app,
-        <ExternalLink url="https://apps.apple.com/us/app/yapp-by-movista/id1529672092" text=" YAPP." />
+        and writing some of the core middleware backbone and a couple screens for Movista&apos;s  mobile communication app,
+        <ExternalLink url="https://apps.apple.com/us/app/yapp-by-movista/id1529672092" text=" YAPP. " />
+        Additionally, I&apos;ve help set web direction and improve developer experience via some custom solutioning within Movista&apos;s core web offering, MVRetail.
       </TextContainerLayout>
       <TextContainerLayout>
         When not at the computer I&apos;m usually making/listening/experiencing music
