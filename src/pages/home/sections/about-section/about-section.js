@@ -19,7 +19,8 @@ const AboutSection = () => (
         I&apos;m Dublin Anondson. I&apos;m a developer living in
         <ExternalLink url="https://northwestarkansas.org/" text=" Northwest Arkansas " />
         with my lovely wife Rachel. It&apos;s gorgeous here but sometimes we wish we
-        were closer to some mountains ⛰️. I&apos;ve taken a sabbatical and am now looking help organizations succeed once again in their technical endeavors.
+        were closer to some mountains ⛰️. I&apos;m currently a team lead for a mobile product at
+        <ExternalLink url="https://www.jbhunt.com/" text=" J.B. Hunt." />
       </TextContainerLayout>
       <TextContainerLayout>
         I&apos;m usually juggling a couple personal projects at a time, which you can
