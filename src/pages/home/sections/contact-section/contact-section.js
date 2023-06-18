@@ -15,7 +15,9 @@ const ContactSection = () => (
     </TextContainerLayout>
     <TextContainerLayout>
       Check out my spotify wrapped for
-      <ExternalLink url="https://open.spotify.com/playlist/37i9dQZF1EUMDoJuT8yJsl?si=ca43a9b4ec9e448c" text=" 2021." />
+      <ExternalLink url="https://open.spotify.com/playlist/37i9dQZF1EUMDoJuT8yJsl?si=ca43a9b4ec9e448c" text=" 2021 " />
+      and
+      <ExternalLink url="https://open.spotify.com/playlist/37i9dQZF1F0sijgNaJdgit?si=ce08ef931bcc41ff" text=" 2022." />
     </TextContainerLayout>
   </BackgroundColorLayout>
 );
