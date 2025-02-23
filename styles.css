@@ -1,0 +1,20 @@
+.footer {
+  text-align: center;
+  padding: 10px;
+  position: absolute;
+  bottom: 0;
+  width: 100% 
+  /* this forces a scroll for some reason need to disable */
+}
+
+.indent {
+    margin-left: 2%;
+}
+
+body {
+  display: flex;
+
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
