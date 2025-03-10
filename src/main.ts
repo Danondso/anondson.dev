@@ -1,7 +1,3 @@
-
-
-
-
 import * as emoji from "node-emoji";
 import "98.css"
 
@@ -16,7 +12,6 @@ const toRoman = (num: number): string => {
     .map(Number)
     .sort((a, b) => b - a);
   for (const value of keys) {
-    // re-read this tomorrow and grok it better haha
     while (num >= value) {
       result += romanNumerals[value];
       num -= value;
@@ -25,10 +20,39 @@ const toRoman = (num: number): string => {
   return result;
 }
 
-document.querySelector<HTMLDivElement>('#title')!.innerHTML = `
-  <h2 id="title""> ${emoji.emojify('Howdy :wave: :cowboy_hat_face: :cow:')}</h2>
-`
 
-document.querySelector<HTMLDivElement>('#copyright')!.innerHTML = emoji.emojify(`
-© ${toRoman(new Date().getFullYear())} with :heart: by Dublin
-`)
+// Set up window controls
+document.addEventListener('DOMContentLoaded', () => {
+    // Set up minimize buttons
+    const windows = document.querySelectorAll('.window');
+    windows.forEach(window => {
+        const minimizeBtn = window.querySelector('button[aria-label="Minimize"]');
+        minimizeBtn?.addEventListener('click', () => {
+            window.classList.toggle('minimized');
+        });
+    });
+
+    // Set copyright year
+    const copyright = document.getElementById('copyright');
+    if (copyright) {
+        copyright.textContent = emoji.emojify(`© ${toRoman(new Date().getFullYear())} with :heart: by Dublin`)  ;
+    }
+
+    // Set title with emojis
+    const title = document.getElementById('title');
+    if (title) {
+        title.innerHTML = emoji.emojify('Howdy :cowboy_hat_face: :cow:');
+    }
+
+    // Set Cool free stuff title with emoji
+    const coolStuffTitle = document.getElementById('cool-stuff-title');
+    if (coolStuffTitle) {
+        coolStuffTitle.innerHTML = emoji.emojify('Cool free stuff :shopping:');
+    }
+
+    // Set GitHub link with octocat emoji
+    const githubLink = document.getElementById('github-link');
+    if (githubLink) {
+        githubLink.innerHTML = emoji.emojify(':computer:');
+    }
+});
