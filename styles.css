@@ -17,16 +17,9 @@ body {
   display: none;
 }
 
-.window.minimized .title-bar-text::before {
-  content: "▶";
-  margin-right: 4px;
-  font-size: 10px;
-}
-
-.window .title-bar-text::before {
-  content: "▼";
-  margin-right: 4px;
-  font-size: 10px;
+/* Window maximized class */
+.window.maximized .window-body {
+  display: block;
 }
 
 .window {
