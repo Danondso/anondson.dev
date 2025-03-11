@@ -1,5 +1,6 @@
 import * as emoji from "node-emoji";
 import "98.css"
+import { AuthObject, buildAuthorization, getUserRecentAchievements, UserRecentAchievement } from "@retroachievements/api";
 
 const toRoman = (num: number): string => {
   const romanNumerals: { [key: number]: string } = {
@@ -22,7 +23,7 @@ const toRoman = (num: number): string => {
 
 
 // Set up window controls
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
     // Set up minimize buttons
     const windows = document.querySelectorAll('.window');
     windows.forEach(window => {
@@ -55,4 +56,38 @@ document.addEventListener('DOMContentLoaded', () => {
     if (githubLink) {
         githubLink.innerHTML = emoji.emojify(':computer:');
     }
+    // RetroAchievements Integration
+    const loadRetroAchievements = async () => {
+        try {
+          const retroAchievementAuth: AuthObject = buildAuthorization({
+            username: import.meta.env.VITE_RETRO_ACHIEVEMENTS_USERNAME,
+            webApiKey: import.meta.env.VITE_RETRO_ACHIEVEMENTS_API_KEY
+          });  
+            const recentAchievements = await getUserRecentAchievements(retroAchievementAuth, { username: 'pinknobody', recentMinutes: 60 * 24 * 7, });
+            const achievementsContainer = document.getElementById('recent-achievements');
+            if (achievementsContainer && recentAchievements) {
+                achievementsContainer.innerHTML = recentAchievements.map((achievement: UserRecentAchievement) => {
+                  console.log(achievement);
+                  return `
+                    <div class="achievement-item">
+                        <img class="achievement-icon" src="${import.meta.env.VITE_RETRO_ACHIEVEMENTS_BASE_URL + achievement.badgeUrl}" alt="${achievement.title}">
+                        <div class="achievement-info">
+                            <div class="achievement-title">${achievement.title}</div>
+                            <div class="achievement-description">${achievement.description}</div>
+                        </div>
+                    </div>
+                `;}).join('');
+            }
+        } catch (error) {
+            console.error('Error loading RetroAchievements data:', error);
+            const container = document.getElementById('retro-achievements-container');
+            if (container) {
+                container.innerHTML = '<p>Error loading RetroAchievements data. Please check your API configuration.</p>';
+            }
+        }
+    };
+
+    // // Load RetroAchievements data
+     await loadRetroAchievements();
 });
+

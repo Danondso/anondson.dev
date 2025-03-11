@@ -247,6 +247,11 @@
   resolved "https://registry.yarnpkg.com/@pkgr/core/-/core-0.1.1.tgz#1ec17e2edbec25c8306d424ecfbf13c7de1aaa31"
   integrity sha512-cq8o4cWH0ibXh9VGi5P20Tu9XF/0fFXl9EUinr9QfTM7a7p0oTA4iJRCQWppXR1Pg8dSM0UCItCkPwsk9qWWYA==
 
+"@retroachievements/api@^2.3.0":
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/@retroachievements/api/-/api-2.3.0.tgz#bb6d6c5e71c9d35054795743c125674f2134d709"
+  integrity sha512-eiSdxRwqDnwy0eHvyFQSDU1v+RDyzYXwTm2AjrBHrv0iaWfJP7P94KfxgK1LvVAspdBnymtY5xyp2hW6qa1BXw==
+
 "@rollup/rollup-android-arm-eabi@4.34.8":
   version "4.34.8"
   resolved "https://registry.yarnpkg.com/@rollup/rollup-android-arm-eabi/-/rollup-android-arm-eabi-4.34.8.tgz#731df27dfdb77189547bcef96ada7bf166bbb2fb"
