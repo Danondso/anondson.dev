@@ -1,59 +1,38 @@
-import * as emoji from "node-emoji";
-import "98.css"
-import { RetroUserSummary, UserRecentAchievement } from "./types";
-import { getUserRecentAchievements, getUserSummary } from "./retroachievements.api";
+import * as emoji from 'node-emoji';
+import '98.css';
+import {
+  GameProgress,
+  GameProgressResponse,
+  RetroUserSummary,
+  UserRecentAchievement,
+} from './types';
+import {
+  getUserRecentAchievements,
+  getUserSummary,
+  getUserProgress,
+} from './retroachievements.api';
+import Joy from '@win95icons/Joy.ico';
+import Computer from '@win95icons/Computer are Earth.ico';
+import DocumentWithEarth from '@win95icons/Document with Earth.ico';
+import BWithFiles from '@win95icons/Box with files.ico';
+import { toRoman } from './utils/numbers';
 
-const toRoman = (num: number): string => {
-  const romanNumerals: { [key: number]: string } = {
-    1000: 'M', 900: 'CM', 500: 'D', 400: 'CD',
-    100: 'C', 90: 'XC', 50: 'L', 40: 'XL',
-    10: 'X', 9: 'IX', 5: 'V', 4: 'IV', 1: 'I'
-  };
-  let result = '';
-  const keys = Object.keys(romanNumerals)
-    .map(Number)
-    .sort((a, b) => b - a);
-  for (const value of keys) {
-    while (num >= value) {
-      result += romanNumerals[value];
-      num -= value;
-    }
-  }
-  return result;
+// Helper function to create icon HTML
+function createIconHTML(
+  iconSrc: string,
+  alt: string = 'icon',
+  size: number = 16
+): string {
+  return `<span><img src="${iconSrc}" alt="${alt}" width="${size}" height="${size}"/></span>`;
 }
-
-function createLoader(containerId: string, message: string = 'Loading...') {
-  const container = document.getElementById(containerId);
-  console.log(":PP", container);
-  if (!container) return;
-
-  container.innerHTML = `
-    <div class="loader-window">
-      <div class="title-bar">
-        <div class="title-bar-text">${message}</div>
-      </div>
-      <div class="loader-content">
-        <div class="loader-animation">
-          <div class="hourglass"></div>
-        </div>
-        <p class="loader-text">${message}</p>
-      </div>
-    </div>
-  `;
-}
-
-
 
 // Function to display the user summary
 async function displayUserSummary() {
   const summary: RetroUserSummary = await getUserSummary();
-  // createLoader('user-summary', 'Loading user summary...');
-  // return;
   const container = document.getElementById('user-summary');
   if (!container) return;
 
   const memberSince = new Date(summary.MemberSince).toLocaleDateString();
-  console.log(summary);
 
   // Format the rich presence message if it exists
   const currentGameStatus = summary.RichPresenceMsg
@@ -91,12 +70,16 @@ async function displayUserSummary() {
                 <td><strong>Member Since:</strong></td>
                 <td>${memberSince}</td>
               </tr>
-              ${summary.Motto ? `
+              ${
+                summary.Motto
+                  ? `
               <tr>
                 <td><strong>Motto:</strong></td>
                 <td>${summary.Motto}</td>
               </tr>
-              ` : ''}
+              `
+                  : ''
+              }
             </table>
           </div>
         </div>
@@ -106,84 +89,123 @@ async function displayUserSummary() {
   `;
 }
 
+// Function to display game progress
+async function displayGameProgress() {
+  try {
+    const progress: GameProgressResponse = await getUserProgress();
+    const container = document.getElementById('game-progress');
+    if (!container) return;
+
+    container.innerHTML = `
+      <div class="progress-grid">
+        ${progress.Results.sort(
+          (a, b) => b.NumAwardedHardcore - a.NumAwardedHardcore
+        )
+          .map(
+            (gameData: GameProgress) => `
+          <div class="progress-item">
+            <div class="progress-header">
+              <img src="${import.meta.env.VITE_RETRO_ACHIEVEMENTS_BASE_URL}${gameData.ImageIcon}" alt="${gameData.Title}" width="32">
+              <span class="progress-title">${gameData.Title} [${gameData.ConsoleName}]</span>
+            </div>
+            <div class="progress-stats">
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: ${(gameData.NumAwardedHardcore / gameData.MaxPossible) * 100}%"></div>
+              </div>
+              <div class="progress-text">
+                ${gameData.NumAwardedHardcore}/${gameData.MaxPossible} achievements
+              </div>
+            </div>
+          </div>
+        `
+          )
+          .join('')}
+      </div>
+    `;
+  } catch (error) {
+    console.error('Error loading game progress:', error);
+    const container = document.getElementById('game-progress');
+    if (container) {
+      container.innerHTML =
+        '<p>Error loading game progress. Please check your API configuration.</p>';
+    }
+  }
+}
 
 // Set up window controls
 document.addEventListener('DOMContentLoaded', async () => {
   // Set up minimize buttons
   const windows = document.querySelectorAll('.window');
-  windows.forEach(window => {
-    window.querySelectorAll('button[aria-label="Minimize"]').forEach((minimizeBtn) => {
-      minimizeBtn?.addEventListener('click', () => {
-        if (window.classList.contains('maximized')) {
-          window.classList.remove('maximized');
-          window.classList.toggle('minimized');
-        }
+  windows.forEach((window) => {
+    window
+      .querySelectorAll('button[aria-label="Minimize"]')
+      .forEach((minimizeBtn) => {
+        minimizeBtn?.addEventListener('click', () => {
+          if (window.classList.contains('maximized')) {
+            window.classList.remove('maximized');
+            window.classList.toggle('minimized');
+          }
+        });
       });
-    });
-    window.querySelectorAll('button[aria-label="Maximize"]').forEach((maximizeBtn) => {
-      maximizeBtn?.addEventListener('click', () => {
-        if (window.classList.contains('minimized')) {
-          window.classList.remove('minimized');
-          window.classList.toggle('maximized');
-        }
+    window
+      .querySelectorAll('button[aria-label="Maximize"]')
+      .forEach((maximizeBtn) => {
+        maximizeBtn?.addEventListener('click', () => {
+          if (window.classList.contains('minimized')) {
+            window.classList.remove('minimized');
+            window.classList.toggle('maximized');
+          }
+        });
       });
-    });
   });
 
   // Set copyright year
   const copyright = document.getElementById('copyright');
   if (copyright) {
-    copyright.textContent = emoji.emojify(`© ${toRoman(new Date().getFullYear())} with :heart: by Dublin`);
-  }
-
-  // Set title with emojis
-  const title = document.getElementById('title');
-  if (title) {
-    title.innerHTML = emoji.emojify('Howdy :cowboy_hat_face: :cow:');
-  }
-
-  // Set Cool free stuff title with emoji
-  const coolStuffTitle = document.getElementById('cool-stuff-title');
-  if (coolStuffTitle) {
-    coolStuffTitle.innerHTML = emoji.emojify('Cool free stuff :shopping:');
+    copyright.textContent = emoji.emojify(
+      `© ${toRoman(new Date().getFullYear())} with :heart: by Dublin`
+    );
   }
 
   // Set GitHub link with octocat emoji
   const githubLink = document.getElementById('github-link');
   if (githubLink) {
-    githubLink.innerHTML = emoji.emojify(':computer:');
+    githubLink.innerHTML = `${createIconHTML(DocumentWithEarth, 'GitHub', 12)}`;
   }
   // RetroAchievements Integration
   const loadRetroAchievements = async () => {
     try {
       const recentAchievements = await getUserRecentAchievements();
 
-      const achievementsContainer = document.getElementById('recent-achievements');
+      const achievementsContainer = document.getElementById(
+        'recent-achievements'
+      );
       if (achievementsContainer && recentAchievements) {
-        achievementsContainer.innerHTML = recentAchievements.map((achievement: UserRecentAchievement) => {
-          return `
-                    <div class="achievement-item">
-                        <img class="achievement-icon" src="${import.meta.env.VITE_RETRO_ACHIEVEMENTS_BASE_URL + achievement.BadgeURL}" alt="${achievement.Title}">
-                        <div class="achievement-info">
-                            <div class="achievement-title">${achievement.Title}</div>
-                            <div class="achievement-description">${achievement.Description}</div>
-                        </div>
-                    </div>
-                `;
-        }).join('');
+        achievementsContainer.innerHTML = recentAchievements
+          .map((achievement: UserRecentAchievement) => {
+            return `
+            <div class="achievement-item">
+                <img class="achievement-icon" src="${import.meta.env.VITE_RETRO_ACHIEVEMENTS_BASE_URL + achievement.BadgeURL}" alt="${achievement.Title}">
+                <div class="achievement-info">
+                    <div class="achievement-title">${achievement.Title}</div>
+                    <div class="achievement-description">${achievement.Description}</div>
+                </div>
+            </div>
+          `;
+          })
+          .join('');
       }
     } catch (error) {
       console.error('Error loading RetroAchievements data:', error);
       const container = document.getElementById('retro-achievements-container');
       if (container) {
-        container.innerHTML = '<p>Error loading RetroAchievements data. Please check your API configuration.</p>';
+        container.innerHTML =
+          '<p>Error loading RetroAchievements data. Please check your API configuration.</p>';
       }
     }
   };
 
-
   await displayUserSummary();
-  // // Load RetroAchievements data
+  await displayGameProgress();
   await loadRetroAchievements();
 });
-

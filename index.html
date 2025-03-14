@@ -3,8 +3,6 @@
   <!-- TODO add yiddish and japanese later on -->
   <head>
     <meta charset="UTF-8" />
-    <!-- <link rel="icon" type="image/svg+xml" href="./compy.svg" /> -->
-    <link rel="icon" type="image/png" href="./compy.png" />
     <link rel="stylesheet" href="node_modules/98.css/dist/98.css" />
     <link rel="stylesheet" href="styles.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,7 +12,19 @@
     <div class="content">
       <div class="window" style="margin: 32px; width: auto">
         <div class="title-bar">
-          <div class="title-bar-text" id="title"></div>
+          <div class="title-bar-text" id="title">
+            Howdy
+            <img
+              src="/windows_95_all_icons_by_vovan29_ddbo0ro/Windows 95 ALL ICONS v1.1/All [Without duplicates]/Mail.ico"
+              style="width: 16px; height: 16px"
+              alt="Windows 95 Computer Card icon"
+            />
+            <img
+              src="/windows_95_all_icons_by_vovan29_ddbo0ro/Windows 95 ALL ICONS v1.1/All [Without duplicates]/Computer Card.ico"
+              style="width: 16px; height: 16px"
+              alt="Windows 95 Computer icon"
+            />
+          </div>
           <div class="title-bar-controls">
             <button aria-label="Minimize"></button>
             <button aria-label="Maximize"></button>
@@ -35,6 +45,11 @@
         <div class="title-bar">
           <div class="title-bar-text" id="cool-stuff-title">
             Cool free stuff
+            <img
+              src="/windows_95_all_icons_by_vovan29_ddbo0ro/Windows 95 ALL ICONS v1.1/All [Without duplicates]/Box with files.ico"
+              style="width: 16px; height: 16px"
+              alt="Windows 95 Box with files icon"
+            />
           </div>
           <div class="title-bar-controls">
             <button aria-label="Minimize"></button>
@@ -67,7 +82,14 @@
 
       <div class="window maximized" style="margin: 32px; width: auto">
         <div class="title-bar">
-          <div class="title-bar-text" id="gaming-title">Gaming 🎮</div>
+          <div class="title-bar-text" id="gaming-title">
+            Gaming
+            <img
+              src="/windows_95_all_icons_by_vovan29_ddbo0ro/Windows 95 ALL ICONS v1.1/All [Without duplicates]/Joy.ico"
+              style="width: 16px; height: 16px"
+              alt="Windows 95 Joystick icon"
+            />
+          </div>
           <div class="title-bar-controls">
             <button aria-label="Minimize"></button>
             <button aria-label="Maximize"></button>
@@ -76,12 +98,12 @@
         </div>
         <div class="window-body">
           <div id="retro-achievements-container">
-            <div id="user-summary" class="user-summary">
-              
-            </div>
+            <div id="user-summary" class="user-summary"></div>
+            <h4>Progress</h4>
             <div id="game-progress" class="game-progress">
               Loading game progress...
             </div>
+            <h4>Recents</h4>
             <div id="recent-achievements" class="achievements-list">
               Loading recent achievements...
             </div>

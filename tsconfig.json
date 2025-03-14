@@ -18,7 +18,13 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "noUncheckedSideEffectImports": true,
+
+    /* Path Aliases */
+    "baseUrl": ".",
+    "paths": {
+      "@win95icons/*": ["public/windows_95_all_icons_by_vovan29_ddbo0ro/Windows 95 ALL ICONS v1.1/All [Without duplicates]/*"]
+    }
   },
   "include": ["src"]
 }

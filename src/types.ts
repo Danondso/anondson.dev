@@ -93,3 +93,23 @@ export interface UserRecentAchievement {
     RecentAchievements: RecentAchievementsCollection;
     Status: string;
   }
+
+  export interface GameProgress {
+    GameID: number;
+    Title: string;
+    ImageIcon: string;
+    ConsoleID: number;
+    ConsoleName: string;
+    MaxPossible: number;
+    NumAwarded: number;
+    NumAwardedHardcore: number;
+    MostRecentAwardedDate: string;
+    HighestAwardKind: string | null;
+    HighestAwardDate: string | null;
+  }
+
+  export interface GameProgressResponse {
+    Count: number;
+    Total: number;
+    Results: GameProgress[];
+  }
