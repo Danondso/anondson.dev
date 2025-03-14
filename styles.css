@@ -31,6 +31,13 @@ body {
 
 .title-bar-text {
   padding: 0 4px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.title-bar-text img {
+  vertical-align: middle;
 }
 
 /* Window Controls */
