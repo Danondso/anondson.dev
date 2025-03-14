@@ -1,6 +1,7 @@
 import * as emoji from "node-emoji";
 import "98.css"
-import { AuthObject, buildAuthorization, getUserRecentAchievements, UserRecentAchievement } from "@retroachievements/api";
+import { RetroUserSummary, UserRecentAchievement } from "./types";
+import { getUserRecentAchievements, getUserSummary } from "./retroachievements.api";
 
 const toRoman = (num: number): string => {
   const romanNumerals: { [key: number]: string } = {
@@ -19,6 +20,90 @@ const toRoman = (num: number): string => {
     }
   }
   return result;
+}
+
+function createLoader(containerId: string, message: string = 'Loading...') {
+  const container = document.getElementById(containerId);
+  console.log(":PP", container);
+  if (!container) return;
+
+  container.innerHTML = `
+    <div class="loader-window">
+      <div class="title-bar">
+        <div class="title-bar-text">${message}</div>
+      </div>
+      <div class="loader-content">
+        <div class="loader-animation">
+          <div class="hourglass"></div>
+        </div>
+        <p class="loader-text">${message}</p>
+      </div>
+    </div>
+  `;
+}
+
+
+
+// Function to display the user summary
+async function displayUserSummary() {
+  const summary: RetroUserSummary = await getUserSummary();
+  // createLoader('user-summary', 'Loading user summary...');
+  // return;
+  const container = document.getElementById('user-summary');
+  if (!container) return;
+
+  const memberSince = new Date(summary.MemberSince).toLocaleDateString();
+  console.log(summary);
+
+  // Format the rich presence message if it exists
+  const currentGameStatus = summary.RichPresenceMsg
+    ? `<div class="status-bar" style="margin-top: 8px;">
+         <div class="status-bar-field">${summary.RecentlyPlayed[0].Title} => ${summary.RichPresenceMsg}</div>
+       </div>`
+    : '';
+
+  container.innerHTML = `
+    <div class="window" style="width: 100%; margin-top: 16px;">
+      <div class="title-bar">
+        <div class="title-bar-text">User Profile: ${summary.User}</div>
+      </div>
+      <div class="window-body">
+        <div class="profile-grid">
+          <div class="profile-pic">
+            <img src="${import.meta.env.VITE_RETRO_ACHIEVEMENTS_BASE_URL}${summary.UserPic}" alt="${summary.User}'s profile picture" width="100">
+            <div class="status ${summary.Status.toLowerCase()}">${summary.Status}</div>
+          </div>
+          <div class="profile-details">
+            <table>
+              <tr>
+                <td><strong>Rank:</strong></td>
+                <td>#${summary.Rank} of ${summary.TotalRanked}</td>
+              </tr>
+              <tr>
+                <td><strong>Points:</strong></td>
+                <td>${summary.TotalPoints} (${summary.TotalTruePoints} true points)</td>
+              </tr>
+              <tr>
+                <td><strong>Hardcore Points:</strong></td>
+                <td>${summary.TotalPoints - summary.TotalSoftcorePoints}</td>
+              </tr>
+              <tr>
+                <td><strong>Member Since:</strong></td>
+                <td>${memberSince}</td>
+              </tr>
+              ${summary.Motto ? `
+              <tr>
+                <td><strong>Motto:</strong></td>
+                <td>${summary.Motto}</td>
+              </tr>
+              ` : ''}
+            </table>
+          </div>
+        </div>
+        ${currentGameStatus}
+      </div>
+    </div>
+  `;
 }
 
 
@@ -71,21 +156,17 @@ document.addEventListener('DOMContentLoaded', async () => {
   // RetroAchievements Integration
   const loadRetroAchievements = async () => {
     try {
-      const retroAchievementAuth: AuthObject = buildAuthorization({
-        username: import.meta.env.VITE_RETRO_ACHIEVEMENTS_USERNAME,
-        webApiKey: import.meta.env.VITE_RETRO_ACHIEVEMENTS_API_KEY
-      });
-      const recentAchievements = await getUserRecentAchievements(retroAchievementAuth, { username: 'pinknobody', recentMinutes: 60 * 24 * 7, });
+      const recentAchievements = await getUserRecentAchievements();
+
       const achievementsContainer = document.getElementById('recent-achievements');
       if (achievementsContainer && recentAchievements) {
         achievementsContainer.innerHTML = recentAchievements.map((achievement: UserRecentAchievement) => {
-          console.log(achievement);
           return `
                     <div class="achievement-item">
-                        <img class="achievement-icon" src="${import.meta.env.VITE_RETRO_ACHIEVEMENTS_BASE_URL + achievement.badgeUrl}" alt="${achievement.title}">
+                        <img class="achievement-icon" src="${import.meta.env.VITE_RETRO_ACHIEVEMENTS_BASE_URL + achievement.BadgeURL}" alt="${achievement.Title}">
                         <div class="achievement-info">
-                            <div class="achievement-title">${achievement.title}</div>
-                            <div class="achievement-description">${achievement.description}</div>
+                            <div class="achievement-title">${achievement.Title}</div>
+                            <div class="achievement-description">${achievement.Description}</div>
                         </div>
                     </div>
                 `;
@@ -100,6 +181,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
   };
 
+
+  await displayUserSummary();
   // // Load RetroAchievements data
   await loadRetroAchievements();
 });
