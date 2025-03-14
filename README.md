@@ -1,16 +1,83 @@
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 
-My personal website written using gatsby.
+# Anondson.dev
 
-<h1 align="center">
-  Gatsby's default starter
-</h1>
+A personal website with a Windows 98 aesthetic, featuring RetroAchievements integration.
+
+## Security Features
+
+This project implements several security best practices:
+
+1. **Content Security Policy (CSP)**: Restricts the sources from which content can be loaded.
+2. **HTML Sanitization**: Uses DOMPurify to sanitize HTML content before rendering.
+3. **Secure Links**: All external links use HTTPS and include `rel="noopener noreferrer"`.
+4. **Input Validation**: All user inputs and API responses are properly sanitized.
+
+## Development
+
+### Setup
+
+```bash
+# Install dependencies
+yarn install
+```
+
+### Running the development server
+
+```bash
+yarn dev
+```
+
+### Building for production
+
+```bash
+yarn build
+```
+
+### Testing
+
+The project uses Vitest for testing. To run the tests:
+
+```bash
+# Install Vitest and JSDOM
+yarn add -D vitest jsdom
+
+# Run tests once
+yarn test
+
+# Run tests in watch mode
+yarn test:watch
+```
+
+### Linting and Formatting
+
+```bash
+# Run ESLint
+yarn lint
+
+# Format code with Prettier
+yarn format
+```
+
+## Security Testing
+
+The `sanitizeHTML` utility has comprehensive tests to ensure it properly sanitizes HTML content:
+
+1. **Unit Tests**: Verify that the function correctly interpolates values and calls DOMPurify.
+2. **Security Tests**: Ensure that malicious content like scripts and event handlers are removed.
+3. **Integration Tests**: Verify that the Windows 98 UI elements are preserved while removing dangerous content.
+
+To run the security tests:
+
+```bash
+yarn test src/utils/sanitize.test.ts
+```
 
 ## 🚀 Quick start
 
 1.  **Start developing.**
 
-    Navigate into your new site’s directory and start it up.
+    Navigate into your new site's directory and start it up.
 
     ```shell
     cd my-default-starter/
@@ -45,7 +112,7 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 
 1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
 
-2.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
+2.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for "source code".
 
 3.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
 
@@ -53,7 +120,7 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 
 5.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.org/docs/browser-apis/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
 
-6.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.org/docs/gatsby-config/) for more detail).
+6.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you'd like to include, etc. (Check out the [config docs](https://www.gatsbyjs.org/docs/gatsby-config/) for more detail).
 
 7.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.org/docs/node-apis/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
 
@@ -61,9 +128,9 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 
 9.  **`LICENSE`**: Gatsby is licensed under the MIT license.
 
-10. **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
+10. **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won't change this file directly).**
 
-11. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
+11. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project's name, author, etc). This manifest is how npm knows which packages to install for your project.
 
 12. **`README.md`**: A text file containing useful reference information about your project.
 
