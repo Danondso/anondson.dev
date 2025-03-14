@@ -9,6 +9,7 @@ import {
   getUserRecentAchievements,
   getUserSummary,
 } from './retroachievements.api';
+import { sanitizeHTML } from '../utils/sanitize';
 
 // Function to display the user summary
 const displayUserSummary = async () => {
@@ -20,12 +21,12 @@ const displayUserSummary = async () => {
 
   // Format the rich presence message if it exists
   const currentGameStatus = summary.RichPresenceMsg
-    ? `<div class="status-bar" style="margin-top: 8px;">
+    ? sanitizeHTML`<div class="status-bar" style="margin-top: 8px;">
            <div class="status-bar-field">${summary.RecentlyPlayed[0].Title} => ${summary.RichPresenceMsg}</div>
          </div>`
     : '';
 
-  container.innerHTML = `
+  container.innerHTML = sanitizeHTML`
       <div class="window" style="margin-top: 16px;">
         <div class="title-bar">
           <div class="title-bar-text">User Profile: ${summary.User}</div>
@@ -56,7 +57,7 @@ const displayUserSummary = async () => {
                 </tr>
                 ${
                   summary.Motto
-                    ? `
+                    ? sanitizeHTML`
                 <tr>
                   <td><strong>Motto:</strong></td>
                   <td>${summary.Motto}</td>
@@ -79,13 +80,13 @@ async function displayGameProgress() {
     const container = document.getElementById('game-progress');
     if (!container) return;
 
-    container.innerHTML = `
+    container.innerHTML = sanitizeHTML`
         <div class="progress-grid">
           ${progress.Results.sort(
             (a, b) => b.NumAwardedHardcore - a.NumAwardedHardcore
           )
             .map(
-              (gameData: GameProgress) => `
+              (gameData: GameProgress) => sanitizeHTML`
             <div class="progress-item">
               <div class="progress-header">
                 <img src="${import.meta.env.VITE_RETRO_ACHIEVEMENTS_BASE_URL}${gameData.ImageIcon}" alt="${gameData.Title}" width="32">
@@ -109,8 +110,9 @@ async function displayGameProgress() {
     console.error('Error loading game progress:', error);
     const container = document.getElementById('game-progress');
     if (container) {
-      container.innerHTML =
-        '<p>Error loading game progress. Please check your API configuration.</p>';
+      container.innerHTML = sanitizeHTML`
+        <p>Error loading game progress. Please check your API configuration.</p>
+      `;
     }
   }
 }
@@ -124,8 +126,7 @@ const loadRetroAchievements = async () => {
     );
     if (achievementsContainer && recentAchievements) {
       achievementsContainer.innerHTML = recentAchievements
-        .map((achievement: UserRecentAchievement) => {
-          return `
+        .map((achievement: UserRecentAchievement) => sanitizeHTML`
             <div class="achievement-item">
                 <img class="achievement-icon" src="${import.meta.env.VITE_RETRO_ACHIEVEMENTS_BASE_URL + achievement.BadgeURL}" alt="${achievement.Title}">
                 <div class="achievement-info">
@@ -133,16 +134,16 @@ const loadRetroAchievements = async () => {
                     <div class="achievement-description">${achievement.Description}</div>
                 </div>
             </div>
-          `;
-        })
+          `)
         .join('');
     }
   } catch (error) {
     console.error('Error loading RetroAchievements data:', error);
     const container = document.getElementById('retro-achievements-container');
     if (container) {
-      container.innerHTML =
-        '<p>Error loading RetroAchievements data. Please check your API configuration.</p>';
+      container.innerHTML = sanitizeHTML`
+        <p>Error loading RetroAchievements data. Please check your API configuration.</p>
+      `;
     }
   }
 };

@@ -3,6 +3,7 @@
   <!-- TODO add yiddish and japanese later on -->
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self' https://retroachievements.org; font-src 'self';">
     <link rel="stylesheet" href="node_modules/98.css/dist/98.css" />
     <link rel="stylesheet" href="styles.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -60,21 +61,16 @@
         <div class="window-body">
           <ul class="bullet-list">
             <li>
-              <a href="https://www.gutenberg.org/" target="_blank"
-                >Project Gutenberg</a
-              >
+              <a href="https://www.gutenberg.org/" target="_blank" rel="noopener noreferrer">Project Gutenberg</a>
             </li>
             <li>
-              <a href="https://librivox.org/" target="_blank">Librivox</a>
+              <a href="https://librivox.org/" target="_blank" rel="noopener noreferrer">Librivox</a>
             </li>
             <li>
-              <a
-                href="https://marhamilresearch4.blob.core.windows.net/gutenberg-public/Website/index.html"
-                >Project Gutenberg Open Audiobook Collection</a
-              >
+              <a href="https://marhamilresearch4.blob.core.windows.net/gutenberg-public/Website/index.html" target="_blank" rel="noopener noreferrer">Project Gutenberg Open Audiobook Collection</a>
             </li>
             <li>
-              <a href="http://bandcamp.com" target="_blank">Bandcamp</a>
+              <a href="https://bandcamp.com" target="_blank" rel="noopener noreferrer">Bandcamp</a>
             </li>
           </ul>
         </div>
@@ -119,6 +115,7 @@
           href="https://github.com/Danondso"
           target="_blank"
           class="github-link"
+          rel="noopener noreferrer"
         >
           <img
             src="/windows_95_all_icons_by_vovan29_ddbo0ro/Windows 95 ALL ICONS v1.1/All [Without duplicates]/My Computer.ico"
