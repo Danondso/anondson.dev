@@ -26,7 +26,7 @@ const displayUserSummary = async () => {
     : '';
 
   container.innerHTML = `
-      <div class="window" style="width: 100%; margin-top: 16px;">
+      <div class="window" style="margin-top: 16px;">
         <div class="title-bar">
           <div class="title-bar-text">User Profile: ${summary.User}</div>
         </div>
