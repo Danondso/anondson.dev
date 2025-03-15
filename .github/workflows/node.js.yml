@@ -32,5 +32,5 @@ jobs:
         run: yarn lint
       - name: test
         run: yarn test
-      - name: build 
+      - name: build
         run: yarn build --if-present

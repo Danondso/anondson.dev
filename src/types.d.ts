@@ -1,4 +1,4 @@
-declare module "*.ico" {
+declare module '*.ico' {
   const content: string;
   export default content;
-} 
+}

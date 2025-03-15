@@ -126,7 +126,8 @@ const loadRetroAchievements = async () => {
     );
     if (achievementsContainer && recentAchievements) {
       achievementsContainer.innerHTML = recentAchievements
-        .map((achievement: UserRecentAchievement) => sanitizeHTML`
+        .map(
+          (achievement: UserRecentAchievement) => sanitizeHTML`
             <div class="achievement-item">
                 <img class="achievement-icon" src="${import.meta.env.VITE_RETRO_ACHIEVEMENTS_BASE_URL + achievement.BadgeURL}" alt="${achievement.Title}">
                 <div class="achievement-info">
@@ -134,7 +135,8 @@ const loadRetroAchievements = async () => {
                     <div class="achievement-description">${achievement.Description}</div>
                 </div>
             </div>
-          `)
+          `
+        )
         .join('');
     }
   } catch (error) {

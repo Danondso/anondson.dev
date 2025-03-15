@@ -11,13 +11,13 @@
   --win98-inactive: #a0a0a0;
   --win98-highlight: #efefef;
   --win98-border-inset: #dfdfdf;
-  
+
   --spacing-xs: 2px;
   --spacing-sm: 4px;
   --spacing-md: 8px;
   --spacing-lg: 16px;
   --spacing-xl: 32px;
-  
+
   --border-standard: 1px solid;
 }
 
@@ -304,27 +304,27 @@ body {
   .window {
     margin: var(--spacing-lg) !important;
   }
-  
+
   .footer {
     margin: 0 var(--spacing-lg) var(--spacing-lg) var(--spacing-lg);
     flex-direction: column;
     gap: var(--spacing-md);
     padding: var(--spacing-md);
   }
-  
+
   .footer .status-bar-field {
     width: 100%;
     text-align: center;
   }
-  
+
   .profile-grid {
     gap: var(--spacing-md);
   }
-  
+
   .profile-details table {
     width: 100%;
   }
-  
+
   .progress-grid {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   }
@@ -336,7 +336,7 @@ body {
     flex-direction: column;
     align-items: center;
   }
-  
+
   .profile-grid {
     grid-template-columns: 1fr;
     width: 100%;
@@ -344,26 +344,26 @@ body {
     margin: 0 auto;
     text-align: center;
   }
-  
+
   .profile-pic {
     margin: 0 auto;
     max-width: 200px;
     align-items: center;
   }
-  
+
   .profile-details {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  
+
   .profile-details table {
     width: 100%;
     margin: var(--spacing-md) auto;
     max-width: 350px;
   }
-  
+
   .status {
     margin: var(--spacing-md) auto 0;
   }
@@ -373,42 +373,42 @@ body {
   .window {
     margin: var(--spacing-md) !important;
   }
-  
+
   .window-body {
     padding: var(--spacing-sm);
   }
-  
+
   .footer {
     margin: 0 var(--spacing-md) var(--spacing-md) var(--spacing-md);
   }
-  
+
   .achievement-item {
     flex-direction: column;
     align-items: flex-start;
   }
-  
+
   .achievement-icon {
     margin-bottom: var(--spacing-md);
     width: 48px;
     height: 48px;
   }
-  
+
   .achievement-info {
     width: 100%;
   }
-  
+
   .progress-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .progress-item {
     padding: var(--spacing-md);
   }
-  
+
   .progress-header {
     flex-wrap: wrap;
   }
-  
+
   .progress-title {
     width: 100%;
     margin-top: var(--spacing-sm);

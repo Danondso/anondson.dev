@@ -8,7 +8,7 @@ import {
 } from './retroachievements/retroachievements.renderer';
 
 // Set up window controls
-document.addEventListener('DOMContentLoaded',  () => {
+document.addEventListener('DOMContentLoaded', () => {
   // Set up minimize buttons
   const windows = document.querySelectorAll('.window');
   windows.forEach((window) => {
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded',  () => {
     );
   }
 
-   displayUserSummary();
-   displayGameProgress();
-   loadRetroAchievements();
+  displayUserSummary();
+  displayGameProgress();
+  loadRetroAchievements();
 });

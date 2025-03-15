@@ -6,9 +6,12 @@ import DOMPurify from 'dompurify';
  * @param values Values to interpolate
  * @returns Sanitized HTML string that's safe to insert into innerHTML
  */
-export function sanitizeHTML(strings: TemplateStringsArray, ...values: string[]): string {
+export function sanitizeHTML(
+  strings: TemplateStringsArray,
+  ...values: string[]
+): string {
   // Interpolate the template literal
-  const rawValues = values.map(value => {
+  const rawValues = values.map((value) => {
     if (value === null || value === undefined) {
       return '';
     }
@@ -24,31 +27,56 @@ export function sanitizeHTML(strings: TemplateStringsArray, ...values: string[])
   return DOMPurify.sanitize(result, {
     ALLOWED_TAGS: [
       // Structure
-      'div', 'span', 'p', 'br',
+      'div',
+      'span',
+      'p',
+      'br',
       // Headings
-      'h1', 'h2', 'h3', 'h4', 'h5', 'h6',
+      'h1',
+      'h2',
+      'h3',
+      'h4',
+      'h5',
+      'h6',
       // Tables
-      'table', 'tr', 'td', 'th', 'thead', 'tbody',
+      'table',
+      'tr',
+      'td',
+      'th',
+      'thead',
+      'tbody',
       // Lists
-      'ul', 'ol', 'li',
+      'ul',
+      'ol',
+      'li',
       // Media
       'img',
       // Interactive
-      'button', 'a',
+      'button',
+      'a',
       // Text formatting
-      'strong', 'em'
+      'strong',
+      'em',
     ],
     ALLOWED_ATTR: [
       // Common attributes
-      'id', 'class', 'style',
+      'id',
+      'class',
+      'style',
       // Media attributes
-      'src', 'alt', 'width', 'height',
+      'src',
+      'alt',
+      'width',
+      'height',
       // Link attributes
-      'href', 'target', 'rel',
+      'href',
+      'target',
+      'rel',
       // Accessibility
-      'aria-label', 'role',
+      'aria-label',
+      'role',
       // Windows 98 specific
-      'title'
+      'title',
     ],
     ADD_ATTR: ['target'], // Ensure target attribute is allowed for links
     ALLOW_DATA_ATTR: false, // Disable data attributes for security
@@ -56,6 +84,6 @@ export function sanitizeHTML(strings: TemplateStringsArray, ...values: string[])
     RETURN_DOM: false, // Return string instead of DOM
     RETURN_DOM_FRAGMENT: false,
     WHOLE_DOCUMENT: false,
-    SANITIZE_DOM: true
+    SANITIZE_DOM: true,
   });
-} 
+}
