@@ -8,7 +8,8 @@ import DOMPurify from 'dompurify';
  */
 export function sanitizeHTML(
   strings: TemplateStringsArray,
-  ...values: string[]
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  ...values: any[]
 ): string {
   // Interpolate the template literal
   const rawValues = values.map((value) => {
