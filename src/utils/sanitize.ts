@@ -6,7 +6,7 @@ import DOMPurify from 'dompurify';
  * @param values Values to interpolate
  * @returns Sanitized HTML string that's safe to insert into innerHTML
  */
-export function sanitizeHTML(strings: TemplateStringsArray, ...values: any[]): string {
+export function sanitizeHTML(strings: TemplateStringsArray, ...values: string[]): string {
   // Interpolate the template literal
   const rawValues = values.map(value => {
     if (value === null || value === undefined) {
