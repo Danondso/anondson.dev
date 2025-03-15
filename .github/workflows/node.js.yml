@@ -28,6 +28,9 @@ jobs:
         run: npm i yarn
       - name: Install dependencies 📦
         run: yarn install --frozen-lockfile
-      - name: Lint && Test
-      - run: yarn lint && yarn test
-      - run: yarn build --if-present
+      - name: Lint
+        run: yarn lint
+      - name: test
+        run: yarn test
+      - name: build 
+        run: yarn build --if-present
