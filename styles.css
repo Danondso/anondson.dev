@@ -1,0 +1,431 @@
+/* Variables */
+:root {
+  --win98-bg: #008080;
+  --win98-surface: #c0c0c0;
+  --win98-border-light: #ffffff;
+  --win98-border-dark: #868686;
+  --win98-text: #000000;
+  --win98-link: #0000ff;
+  --win98-link-visited: #880088;
+  --win98-success: #00a000;
+  --win98-inactive: #a0a0a0;
+  --win98-highlight: #efefef;
+  --win98-border-inset: #dfdfdf;
+
+  --spacing-xs: 2px;
+  --spacing-sm: 4px;
+  --spacing-md: 8px;
+  --spacing-lg: 16px;
+  --spacing-xl: 32px;
+
+  --border-standard: 1px solid;
+}
+
+/* Base Layout */
+body {
+  background-color: var(--win98-bg);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;
+  margin-bottom: var(--spacing-lg); /* Add space for footer */
+}
+
+#name {
+  font-size: large;
+}
+
+/* Window Styles */
+.window {
+  transition: all 0.2s ease;
+  margin: var(--spacing-xl);
+  width: auto;
+}
+
+.windows-95-icon {
+  width: var(--spacing-lg);
+  height: 16px;
+}
+
+.window.minimized .window-body {
+  display: none;
+}
+
+.window.maximized .window-body {
+  display: block;
+}
+
+.window-body {
+  padding: var(--spacing-sm);
+}
+
+.title-bar-text {
+  padding: 0 var(--spacing-sm);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.title-bar-text img {
+  vertical-align: middle;
+}
+
+/* Window Controls */
+.title-bar-controls button:hover {
+  filter: brightness(100%);
+}
+
+/* Common Elements */
+.flex-center {
+  display: flex;
+  align-items: center;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Bullet List */
+.bullet-list {
+  list-style-type: disc;
+  margin: 0;
+  padding-left: 20px;
+}
+
+.bullet-list li {
+  margin: var(--spacing-sm) 0;
+}
+
+/* Links */
+.window-body a {
+  text-decoration: none;
+  color: var(--win98-link);
+}
+
+.window-body a:visited {
+  color: var(--win98-link-visited);
+}
+
+.window-body a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: auto;
+  margin: 0 var(--spacing-xl);
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--win98-surface);
+  border-top: var(--border-standard) var(--win98-border-light);
+  border-left: var(--border-standard) var(--win98-border-light);
+  border-right: var(--border-standard) var(--win98-border-dark);
+  border-bottom: var(--border-standard) var(--win98-border-dark);
+  padding: var(--spacing-xs);
+  z-index: 1000; /* Ensure footer stays on top */
+}
+
+.footer .status-bar-field {
+  border: none;
+  white-space: nowrap;
+}
+
+.github-link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--win98-text);
+  gap: var(--spacing-sm);
+}
+
+/* User Summary */
+.user-summary {
+  margin-bottom: var(--spacing-lg);
+  align-items: center;
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--spacing-lg);
+  align-items: start;
+}
+
+.profile-pic {
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-pic img {
+  border: 2px inset var(--win98-border-light);
+  background-color: var(--win98-surface);
+  padding: var(--spacing-sm);
+}
+
+.status {
+  margin-top: var(--spacing-md);
+  padding: var(--spacing-xs) var(--spacing-md);
+  display: inline-block;
+  font-size: 12px;
+  border: var(--border-standard) var(--win98-text);
+}
+
+.status.online {
+  background-color: var(--win98-success);
+  color: white;
+}
+
+.status.offline {
+  background-color: var(--win98-inactive);
+  color: white;
+}
+
+.profile-details table {
+  margin-top: var(--spacing-md);
+  width: 60%;
+  border-collapse: collapse;
+  border: var(--border-standard) var(--win98-text);
+}
+
+.profile-details td {
+  border: var(--border-standard) var(--win98-text);
+  padding: var(--spacing-sm) var(--spacing-md);
+}
+
+.profile-details tr:nth-child(even) {
+  background-color: var(--win98-highlight);
+}
+
+.profile-details strong {
+  color: #222;
+}
+
+/* Achievements List */
+.achievements-list {
+  margin: var(--spacing-md) 0;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.achievement-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--spacing-md);
+  padding: var(--spacing-md);
+  border: var(--border-standard) var(--win98-border-inset);
+}
+
+.achievement-icon {
+  width: 32px;
+  height: 32px;
+  margin-right: var(--spacing-md);
+}
+
+.achievement-info {
+  flex-grow: 1;
+}
+
+.achievement-title {
+  font-weight: bold;
+  margin-bottom: var(--spacing-sm);
+}
+
+.achievement-description {
+  font-size: 0.9em;
+  color: #666;
+}
+
+/* Game Progress */
+.game-progress {
+  margin-top: var(--spacing-lg);
+}
+
+.progress-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-lg);
+}
+
+.progress-item {
+  border: var(--border-standard) var(--win98-border-inset);
+  padding: var(--spacing-md);
+  background-color: white;
+}
+
+.progress-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+}
+
+.progress-header img {
+  border: 1px inset var(--win98-border-light);
+  background-color: var(--win98-surface);
+  padding: var(--spacing-xs);
+}
+
+.progress-title {
+  font-weight: bold;
+  flex-grow: 1;
+}
+
+.progress-stats {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.progress-bar {
+  width: 100%;
+  height: 16px;
+  background-color: var(--win98-surface);
+  border: var(--border-standard) var(--win98-border-dark);
+  position: relative;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: var(--win98-success);
+  transition: width 0.3s ease;
+}
+
+.progress-info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9em;
+  color: #666;
+  margin-top: var(--spacing-xs);
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .window {
+    margin: var(--spacing-lg) !important;
+  }
+
+  .footer {
+    margin: 0 var(--spacing-lg);
+    flex-direction: row;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md);
+  }
+
+  .footer .status-bar-field {
+    width: 100%;
+    text-align: center;
+  }
+
+  .profile-grid {
+    gap: var(--spacing-md);
+  }
+
+  .profile-details table {
+    width: 100%;
+  }
+
+  .progress-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .user-summary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-grid {
+    grid-template-columns: 1fr;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .profile-pic {
+    margin: 0 auto;
+    max-width: 200px;
+    align-items: center;
+  }
+
+  .profile-details {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-details table {
+    width: 100%;
+    margin: var(--spacing-md) auto;
+    max-width: 350px;
+  }
+
+  .status {
+    margin: var(--spacing-md) auto 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .window {
+    margin: var(--spacing-md) !important;
+  }
+
+  .window-body {
+    padding: var(--spacing-sm);
+  }
+
+  .footer {
+    margin: 0 var(--spacing-md);
+  }
+
+  .achievement-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .achievement-icon {
+    margin-bottom: var(--spacing-md);
+    width: 48px;
+    height: 48px;
+  }
+
+  .achievement-info {
+    width: 100%;
+  }
+
+  .progress-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .progress-item {
+    padding: var(--spacing-md);
+  }
+
+  .progress-header {
+    flex-wrap: wrap;
+  }
+
+  .progress-title {
+    width: 100%;
+    margin-top: var(--spacing-sm);
+  }
+}
