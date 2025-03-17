@@ -140,8 +140,6 @@ body {
 .footer .status-bar-field {
   border: none;
   white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .github-link {
@@ -324,7 +322,7 @@ body {
 
   .footer {
     margin: 0 var(--spacing-lg);
-    flex-direction: column;
+    flex-direction: row;
     gap: var(--spacing-md);
     padding: var(--spacing-md);
   }
