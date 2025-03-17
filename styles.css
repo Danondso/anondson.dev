@@ -33,6 +33,7 @@ body {
 
 .content {
   flex: 1;
+  margin-bottom: var(--spacing-lg); /* Add space for footer */
 }
 
 #name {
@@ -117,10 +118,12 @@ body {
 
 /* Footer */
 .footer {
-  margin: 0 var(--spacing-xl) var(--spacing-xl) var(--spacing-xl);
-  position: sticky;
+  position: fixed;
   bottom: 0;
+  left: 0;
+  right: 0;
   width: auto;
+  margin: 0 var(--spacing-xl);
   text-align: center;
   display: flex;
   justify-content: space-between;
@@ -131,6 +134,7 @@ body {
   border-right: var(--border-standard) var(--win98-border-dark);
   border-bottom: var(--border-standard) var(--win98-border-dark);
   padding: var(--spacing-xs);
+  z-index: 1000; /* Ensure footer stays on top */
 }
 
 .footer .status-bar-field {
@@ -316,7 +320,7 @@ body {
   }
 
   .footer {
-    margin: 0 var(--spacing-lg) var(--spacing-lg) var(--spacing-lg);
+    margin: 0 var(--spacing-lg);
     flex-direction: column;
     gap: var(--spacing-md);
     padding: var(--spacing-md);
@@ -389,7 +393,7 @@ body {
   }
 
   .footer {
-    margin: 0 var(--spacing-md) var(--spacing-md) var(--spacing-md);
+    margin: 0 var(--spacing-md);
   }
 
   .achievement-item {
