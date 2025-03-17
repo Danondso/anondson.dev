@@ -307,10 +307,13 @@ body {
   transition: width 0.3s ease;
 }
 
-.progress-text {
+.progress-info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   font-size: 0.9em;
   color: #666;
-  text-align: right;
+  margin-top: var(--spacing-xs);
 }
 
 /* Media Queries */

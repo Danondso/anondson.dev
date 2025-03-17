@@ -82,9 +82,12 @@ async function displayGameProgress() {
 
     container.innerHTML = sanitizeHTML`
         <div class="progress-grid">
-          ${progress.Results.sort(
-            (a, b) => b.NumAwardedHardcore - a.NumAwardedHardcore
-          )
+          ${progress.Results.sort((a, b) => {
+            const dateA = new Date(a.MostRecentAwardedDate).getTime();
+            const dateB = new Date(b.MostRecentAwardedDate).getTime();
+            // Sort in descending order (most recent first)
+            return dateB - dateA;
+          })
             .map(
               (gameData: GameProgress) => sanitizeHTML`
             <div class="progress-item">
@@ -96,8 +99,13 @@ async function displayGameProgress() {
                 <div class="progress-bar">
                   <div class="progress-fill" style="width: ${(gameData.NumAwardedHardcore / gameData.MaxPossible) * 100}%"></div>
                 </div>
-                <div class="progress-text">
-                  ${gameData.NumAwardedHardcore}/${gameData.MaxPossible} achievements
+                <div class="progress-info-row">
+                  <div>
+                    Last Awarded: ${new Date(gameData.MostRecentAwardedDate).toLocaleDateString()}
+                  </div>
+                  <div>
+                    ${gameData.NumAwardedHardcore}/${gameData.MaxPossible} achievements
+                  </div>
                 </div>
               </div>
             </div>
