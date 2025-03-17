@@ -35,10 +35,20 @@ body {
   flex: 1;
 }
 
+#name {
+  font-size: large;
+}
+
 /* Window Styles */
 .window {
   transition: all 0.2s ease;
   margin: var(--spacing-xl);
+  width: auto;
+}
+
+.windows-95-icon {
+  width: var(--spacing-lg);
+  height: 16px;
 }
 
 .window.minimized .window-body {
