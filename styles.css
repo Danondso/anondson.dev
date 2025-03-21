@@ -48,7 +48,7 @@ body {
   margin: var(--spacing-xl);
   width: auto;
   background-color: var(--win98-surface);
-  box-shadow: 
+  box-shadow:
     inset 1px 1px 0px var(--win98-border-light),
     inset -1px -1px 0px var(--win98-border-dark);
 }
@@ -459,13 +459,15 @@ body {
   border: 1px solid transparent;
 }
 
-.desktop-icon:hover, .desktop-icon:focus {
+.desktop-icon:hover,
+.desktop-icon:focus {
   background-color: var(--win95-highlight);
   border: 1px dotted var(--win98-text);
   outline: 1px solid var(--win95-highlight);
 }
 
-.desktop-icon:hover .icon-label, .desktop-icon:focus .icon-label {
+.desktop-icon:hover .icon-label,
+.desktop-icon:focus .icon-label {
   color: var(--win98-border-light);
 }
 
