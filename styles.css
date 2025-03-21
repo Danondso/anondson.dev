@@ -1,5 +1,7 @@
 /* Variables */
 :root {
+  --win95-highlight: #000080;
+  --win98-icon-size: 32px;
   --win98-bg: #008080;
   --win98-surface: #c0c0c0;
   --win98-border-light: #ffffff;
@@ -45,6 +47,10 @@ body {
   transition: all 0.2s ease;
   margin: var(--spacing-xl);
   width: auto;
+  background-color: var(--win98-surface);
+  box-shadow:
+    inset 1px 1px 0px var(--win98-border-light),
+    inset -1px -1px 0px var(--win98-border-dark);
 }
 
 .windows-95-icon {
@@ -428,4 +434,71 @@ body {
     width: 100%;
     margin-top: var(--spacing-sm);
   }
+}
+
+/* Desktop Icons Styling */
+.desktop-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(var(--spacing-md) * 3);
+  padding: var(--spacing-lg);
+  background-color: var(--win98-surface);
+  border: 1px solid var(--win98-border-dark);
+}
+
+.desktop-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  color: var(--win98-text);
+  width: calc(var(--win98-icon-size) * 2);
+  cursor: pointer;
+  padding: var(--spacing-md);
+  border: 1px solid transparent;
+}
+
+.desktop-icon:hover,
+.desktop-icon:focus {
+  background-color: var(--win95-highlight);
+  border: 1px dotted var(--win98-text);
+  outline: 1px solid var(--win95-highlight);
+}
+
+.desktop-icon:hover .icon-label,
+.desktop-icon:focus .icon-label {
+  color: var(--win98-border-light);
+}
+
+.desktop-icon img {
+  margin-bottom: var(--spacing-md);
+  image-rendering: pixelated;
+  width: var(--win98-icon-size);
+  height: var(--win98-icon-size);
+}
+
+.icon-label {
+  font-size: 11px;
+  line-height: 1.2;
+  max-width: calc(var(--win98-icon-size) * 2);
+}
+
+/* Two-column row layout */
+.two-column-row {
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-xl);
+  margin: var(--spacing-xl);
+}
+
+@media (max-width: 768px) {
+  .two-column-row {
+    flex-direction: column;
+  }
+}
+
+.column-item {
+  flex: 1;
+  min-width: 0; /* Fix for flexbox children not shrinking properly */
 }
