@@ -1,0 +1,40 @@
+import { UserRecentAchievement } from '../../retroachievements/types';
+
+export const mockRecentAchievements: UserRecentAchievement[] = [
+  {
+    Date: '2023-01-01',
+    HardcoreMode: 1,
+    AchievementID: 123,
+    Title: 'Test Achievement 1',
+    Description: 'Test Description 1',
+    BadgeName: 'badge1',
+    Points: 10,
+    TrueRatio: 1.5,
+    Type: null,
+    Author: 'Author1',
+    GameTitle: 'Game1',
+    GameIcon: '/game1.png',
+    GameID: 456,
+    ConsoleName: 'NES',
+    BadgeURL: '/Badge/123.png',
+    GameURL: '/Game/456',
+  },
+  {
+    Date: '2023-01-02',
+    HardcoreMode: 0,
+    AchievementID: 789,
+    Title: 'Test Achievement 2',
+    Description: 'Test Description 2',
+    BadgeName: 'badge2',
+    Points: 20,
+    TrueRatio: 2.0,
+    Type: null,
+    Author: 'Author2',
+    GameTitle: 'Game2',
+    GameIcon: '/game2.png',
+    GameID: 789,
+    ConsoleName: 'SNES',
+    BadgeURL: '/Badge/789.png',
+    GameURL: '/Game/789',
+  }
+]; 
