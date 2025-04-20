@@ -1,19 +1,25 @@
 import { defineConfig } from 'vitest/config';
+import { resolve } from 'path';
 
 export default defineConfig({
   test: {
     globals: true,
     environment: 'jsdom',
     setupFiles: ['./vitest.setup.ts'],
-    include: ['**/*.test.ts'],
+    environmentOptions: {
+      jsdom: {
+        url: 'http://localhost:3000/',
+      },
+    },
     coverage: {
-      reporter: ['text', 'json', 'html'],
-      exclude: ['node_modules/'],
+      provider: 'v8',
+      reporter: ['text', 'lcov'],
+      exclude: ['node_modules/', 'vitest.setup.ts'],
     },
   },
   resolve: {
     alias: {
-      src: '/src',
+      '@': resolve(__dirname, './src'),
     },
   },
 });

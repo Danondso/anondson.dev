@@ -1,7 +1,7 @@
 import {
-  GameProgressResponse,
-  RetroUserSummary,
-  UserRecentAchievement,
+  type GameProgressResponse,
+  type RetroUserSummary,
+  type UserRecentAchievement,
 } from './types';
 const auth = {
   username: import.meta.env.VITE_RETRO_ACHIEVEMENTS_USERNAME,
