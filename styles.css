@@ -180,6 +180,20 @@ body {
 .footer .status-bar-field {
   border: none;
   white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+/* Footer hits counter overrides */
+.footer #hits-counter .hits-counter {
+  margin-top: 0;
+  margin-right: var(--spacing-md);
+  display: inline-flex;
+}
+
+.footer #hits-counter .hits-counter-field {
+  padding: 0 var(--spacing-sm);
 }
 
 .github-link {
@@ -370,6 +384,11 @@ body {
   .footer .status-bar-field {
     width: 100%;
     text-align: center;
+    justify-content: center;
+  }
+  
+  .footer #hits-counter .hits-counter {
+    margin-right: var(--spacing-sm);
   }
 
   .profile-grid {
@@ -435,6 +454,15 @@ body {
 
   .footer {
     margin: 0 var(--spacing-md);
+  }
+
+  .footer .status-bar-field {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+  
+  .footer #hits-counter .hits-counter {
+    margin-right: 0;
   }
 
   .achievement-item {

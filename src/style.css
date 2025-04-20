@@ -1,0 +1,174 @@
+/* Hits counter styles */
+.hits-counter {
+  margin-top: 16px;
+  font-size: 0.9em;
+  display: inline-block;
+  border: 1px solid #888;
+  background-color: #c0c0c0;
+  box-shadow: inset 1px 1px 0px #dfdfdf, inset -1px -1px 0px #808080;
+  padding: 2px 6px;
+}
+
+.hits-counter-field {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.hits-counter-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 2px;
+}
+
+.counter-value {
+  font-family: "MS Sans Serif", sans-serif;
+  background-color: #fff;
+  border: inset 2px #808080;
+  padding: 1px 4px;
+  min-width: 60px;
+  text-align: right;
+  margin-left: 4px;
+}
+
+.counter-label {
+  margin-right: 4px;
+}
+
+.counter-loaded {
+  animation: pulse 1s ease-in-out;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.5; }
+  50% { opacity: 1; }
+  100% { opacity: 0.5; }
+}
+
+/* Hits Counter - Windows 95 Style */
+.hits-counter {
+  display: inline-block;
+  border: 1px solid #888;
+  border-bottom-color: #efefef;
+  border-right-color: #efefef;
+  background-color: #c0c0c0;
+  box-shadow: inset 1px 1px 0 #fff, inset -1px -1px 0 #888;
+  padding: 4px 6px;
+  font-family: "MS Sans Serif", Tahoma, sans-serif;
+  font-size: 11px;
+  color: #000;
+  margin: 3px 0;
+}
+
+.hits-counter-field {
+  display: flex;
+  align-items: center;
+}
+
+.hits-counter-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+}
+
+.counter-label {
+  margin-right: 4px;
+}
+
+.counter-value {
+  font-family: "MS Sans Serif", Tahoma, sans-serif;
+  background-color: #fff;
+  border: 1px inset #888;
+  padding: 0 4px;
+  min-width: 40px;
+  text-align: right;
+  color: #000080;
+  font-weight: normal;
+}
+
+/* Animation for counter loading */
+@keyframes counter-pulse {
+  0% { background-color: #fff; }
+  50% { background-color: #c3dcf5; }
+  100% { background-color: #fff; }
+}
+
+.counter-loaded .counter-value {
+  animation: counter-pulse 1s ease-in-out;
+}
+
+/* Windows 95 Button Styles - for consistency if needed elsewhere */
+.win95-button {
+  border: 1px solid #888;
+  border-bottom-color: #000;
+  border-right-color: #000;
+  background-color: #c0c0c0;
+  box-shadow: inset 1px 1px 0 #fff, inset -1px -1px 0 #888;
+  padding: 2px 6px;
+  font-family: "MS Sans Serif", Tahoma, sans-serif;
+  font-size: 11px;
+  color: #000;
+  margin: 2px;
+}
+
+.win95-button:active {
+  box-shadow: inset 1px 1px 0 #888, inset -1px -1px 0 #fff;
+  padding: 3px 5px 1px 7px;
+}
+
+/* Windows 95 Link Style */
+.win95-link {
+  color: #000080;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.win95-link:visited {
+  color: #800080;
+}
+
+/* Hits counter */
+.hits-counter {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+  font-family: "Pixelated MS Sans Serif", Arial;
+  -webkit-font-smoothing: none;
+}
+
+.hits-counter-field {
+  display: flex;
+  align-items: center;
+  background: white;
+  box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.3);
+  padding: 0.25rem 0.5rem;
+  border: 1px solid #7c7c7c;
+}
+
+.hits-counter-icon {
+  margin-right: 0.5rem;
+  width: 16px;
+  height: 16px;
+}
+
+.counter-value {
+  font-family: "Pixelated MS Sans Serif", Arial;
+  font-size: 1rem;
+}
+
+/* Counter animation */
+.counter-loaded .counter-value {
+  animation: counter-pulse 1s ease;
+}
+
+@keyframes counter-pulse {
+  0% {
+    color: #000;
+  }
+  50% {
+    color: #0000ff;
+  }
+  100% {
+    color: #000;
+  }
+} 

@@ -6,6 +6,7 @@ import {
   displayGameProgress,
   loadRetroAchievements,
 } from './retroachievements/retroachievements.renderer';
+import { initHitsCounter, updateHitsCounter } from './components/HitsCounter';
 
 // Set up window controls
 document.addEventListener('DOMContentLoaded', () => {
@@ -42,7 +43,16 @@ document.addEventListener('DOMContentLoaded', () => {
     );
   }
 
+  // Initialize RetroAchievements components
   displayUserSummary();
   displayGameProgress();
   loadRetroAchievements();
+  
+  // Initialize hits counter
+  initHitsCounter();
+  
+  // Periodically update the hits counter (every 5 minutes)
+  setInterval(() => {
+    updateHitsCounter();
+  }, 5 * 60 * 1000);
 });
