@@ -1,8 +1,8 @@
-import { beforeAll } from 'vitest';
+import { beforeAll, vi } from 'vitest';
 import { JSDOM } from 'jsdom';
 import DOMPurify from 'dompurify';
 
-// Set up JSDOM environment for DOMPurify
+// Mock import.meta.env for RetroAchievements API
 beforeAll(() => {
   // Create a new JSDOM instance
   const { window } = new JSDOM('<!DOCTYPE html><html><body></body></html>', {
@@ -20,4 +20,11 @@ beforeAll(() => {
 
   // Make DOMPurify available globally
   global.DOMPurify = purify;
+
+  // Mock the import.meta.env variables for RetroAchievements API
+  vi.mock('import.meta.env', () => ({
+    VITE_RETRO_ACHIEVEMENTS_USERNAME: 'test_user',
+    VITE_RETRO_ACHIEVEMENTS_API_KEY: 'test_api_key_12345',
+    VITE_RETRO_ACHIEVEMENTS_BASE_URL: 'https://retroachievements.org',
+  }));
 });
